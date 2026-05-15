@@ -355,6 +355,35 @@ footer{
     }
 
 }
+.cart-left{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.qty-box button{
+    width:28px;
+    height:28px;
+    border:none;
+    border-radius:50%;
+    background:#d8a07d;
+    color:#111;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.qty-box span{
+    min-width:20px;
+    text-align:center;
+    font-weight:bold;
+}
 
 </style>
 </head>
@@ -398,6 +427,61 @@ View Menu
 
 <section class="menu" id="menu">
 
+<!-- STARTERS -->
+
+<div class="card">
+<h2>Starters</h2>
+
+<div class="item">
+<span>Chicken & Cheese Poutine</span>
+
+<div class="price-add">
+<b>$7</b>
+<button class="add-btn"
+onclick="addToCart('Chicken & Cheese Poutine',7)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Cheese Poutine</span>
+
+<div class="price-add">
+<b>$5</b>
+<button class="add-btn"
+onclick="addToCart('Cheese Poutine',5)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>French Fries</span>
+
+<div class="price-add">
+<b>$2.5</b>
+<button class="add-btn"
+onclick="addToCart('French Fries',2.5)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Loaded Fries</span>
+
+<div class="price-add">
+<b>$5</b>
+<button class="add-btn"
+onclick="addToCart('Loaded Fries',5)">
++
+</button>
+</div>
+</div>
+
+</div>
+
 <!-- BURGERS -->
 
 <div class="card">
@@ -407,119 +491,305 @@ View Menu
 <p>All burgers are served with fries</p>
 
 <div class="item">
-
-<div class="item-info">
-<h3>Noir Burger</h3>
-<p>Special burger with sauce</p>
-</div>
+<span>Noir Burger</span>
 
 <div class="price-add">
 <b>$10</b>
-
 <button class="add-btn"
 onclick="addToCart('Noir Burger',10)">
 +
 </button>
 </div>
-
 </div>
 
 <div class="item">
-
-<div class="item-info">
-<h3>Crispy Chicken Burger</h3>
-<p>Crispy chicken with fries</p>
-</div>
+<span>Ham & Cheese Burger</span>
 
 <div class="price-add">
 <b>$8</b>
+<button class="add-btn"
+onclick="addToCart('Ham & Cheese Burger',8)">
++
+</button>
+</div>
+</div>
 
+<div class="item">
+<span>Crispy Chicken Burger</span>
+
+<div class="price-add">
+<b>$8</b>
 <button class="add-btn"
 onclick="addToCart('Crispy Chicken Burger',8)">
 +
 </button>
 </div>
-
 </div>
 
 <div class="item">
-
-<div class="item-info">
-<h3>Lebanese Burger</h3>
-<p>Classic Lebanese taste</p>
-</div>
+<span>Lebanese Burger</span>
 
 <div class="price-add">
 <b>$6</b>
-
 <button class="add-btn"
 onclick="addToCart('Lebanese Burger',6)">
 +
 </button>
 </div>
+</div>
 
+<div class="item">
+<span>Grilled Chicken Breast Burger</span>
+
+<div class="price-add">
+<b>$6</b>
+<button class="add-btn"
+onclick="addToCart('Grilled Chicken Breast Burger',6)">
++
+</button>
+</div>
+</div>
+
+</div>
+
+<!-- SANDWICHES -->
+
+<div class="card">
+
+<h2>Sandwiches</h2>
+
+<p>All sandwiches are served with fries</p>
+
+<div class="item">
+<span>Steak Sandwich</span>
+
+<div class="price-add">
+<b>$8</b>
+<button class="add-btn"
+onclick="addToCart('Steak Sandwich',8)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Fajita Sandwich</span>
+
+<div class="price-add">
+<b>$7</b>
+<button class="add-btn"
+onclick="addToCart('Fajita Sandwich',7)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Submarine Sandwich</span>
+
+<div class="price-add">
+<b>$7</b>
+<button class="add-btn"
+onclick="addToCart('Submarine Sandwich',7)">
++
+</button>
+</div>
+</div>
+
+</div>
+
+<!-- HOT DOGS -->
+
+<div class="card">
+
+<h2>Hot Dogs</h2>
+
+<div class="item">
+<span>Classic Hot Dog</span>
+
+<div class="price-add">
+<b>$5</b>
+<button class="add-btn"
+onclick="addToCart('Classic Hot Dog',5)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Jalapeño Hot Dog</span>
+
+<div class="price-add">
+<b>$6</b>
+<button class="add-btn"
+onclick="addToCart('Jalapeño Hot Dog',6)">
++
+</button>
+</div>
 </div>
 
 </div>
 
 <!-- KAAK -->
 
-<div class="card">
+<div class="card big" id="kaak">
 
 <h2>Kaak Selection</h2>
 
 <div class="item">
-
-<div class="item-info">
-<h3>Zaatar</h3>
-<p>Fresh baked kaak</p>
-</div>
+<span>Zaatar</span>
 
 <div class="price-add">
 <b>$2</b>
-
 <button class="add-btn"
 onclick="addToCart('Zaatar',2)">
 +
 </button>
 </div>
-
 </div>
 
 <div class="item">
+<span>Zaatar W Veggies</span>
 
-<div class="item-info">
-<h3>Pizza Kaak</h3>
-<p>Pizza style kaak</p>
+<div class="price-add">
+<b>$2.5</b>
+<button class="add-btn"
+onclick="addToCart('Zaatar W Veggies',2.5)">
++
+</button>
 </div>
+</div>
+
+<div class="item">
+<span>Zaatar W Cheese</span>
+
+<div class="price-add">
+<b>$3.5</b>
+<button class="add-btn"
+onclick="addToCart('Zaatar W Cheese',3.5)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Zaatar W Labneh</span>
+
+<div class="price-add">
+<b>$3</b>
+<button class="add-btn"
+onclick="addToCart('Zaatar W Labneh',3)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Labneh W Veggies</span>
+
+<div class="price-add">
+<b>$4</b>
+<button class="add-btn"
+onclick="addToCart('Labneh W Veggies',4)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Cheese</span>
+
+<div class="price-add">
+<b>$3.5</b>
+<button class="add-btn"
+onclick="addToCart('Cheese',3.5)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Cheese W Picon</span>
+
+<div class="price-add">
+<b>$4</b>
+<button class="add-btn"
+onclick="addToCart('Cheese W Picon',4)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Halloumi</span>
+
+<div class="price-add">
+<b>$4</b>
+<button class="add-btn"
+onclick="addToCart('Halloumi',4)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Turkey W Cheese</span>
+
+<div class="price-add">
+<b>$5</b>
+<button class="add-btn"
+onclick="addToCart('Turkey W Cheese',5)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Sujuk</span>
+
+<div class="price-add">
+<b>$5</b>
+<button class="add-btn"
+onclick="addToCart('Sujuk',5)">
++
+</button>
+</div>
+</div>
+
+<div class="item">
+<span>Pizza</span>
 
 <div class="price-add">
 <b>$6</b>
-
 <button class="add-btn"
-onclick="addToCart('Pizza Kaak',6)">
+onclick="addToCart('Pizza',6)">
 +
 </button>
 </div>
-
 </div>
 
 <div class="item">
-
-<div class="item-info">
-<h3>Steak Kaak</h3>
-<p>Steak with cheese</p>
-</div>
+<span>Steak</span>
 
 <div class="price-add">
 <b>$7</b>
-
 <button class="add-btn"
-onclick="addToCart('Steak Kaak',7)">
+onclick="addToCart('Steak',7)">
 +
 </button>
 </div>
+</div>
 
+<div class="item">
+<span>Nutella</span>
+
+<div class="price-add">
+<b>$4</b>
+<button class="add-btn"
+onclick="addToCart('Nutella',4)">
++
+</button>
+</div>
 </div>
 
 </div>
@@ -620,6 +890,8 @@ function addToCart(name,price){
     updateCart();
 }
 
+/* UPDATE CART */
+
 function updateCart(){
 
     const cartItems =
@@ -636,7 +908,7 @@ function updateCart(){
     let total = 0;
     let count = 0;
 
-    cart.forEach(item=>{
+    cart.forEach((item,index)=>{
 
         total += item.price * item.qty;
         count += item.qty;
@@ -645,11 +917,28 @@ function updateCart(){
 
         <div class="cart-item">
 
-            <div>
+            <div class="cart-left">
+
                 <h4>${item.name}</h4>
+
                 <small>
-                ${item.qty} x $${item.price}
+                $${item.price} each
                 </small>
+
+                <div class="qty-box">
+
+                    <button onclick="changeQty(${index},-1)">
+                    −
+                    </button>
+
+                    <span>${item.qty}</span>
+
+                    <button onclick="changeQty(${index},1)">
+                    +
+                    </button>
+
+                </div>
+
             </div>
 
             <strong>
@@ -665,6 +954,23 @@ function updateCart(){
     cartTotal.innerText = total;
 }
 
+/* CHANGE QTY */
+
+function changeQty(index,change){
+
+    cart[index].qty += change;
+
+    if(cart[index].qty <= 0){
+
+        cart.splice(index,1);
+
+    }
+
+    updateCart();
+}
+
+/* OPEN CART */
+
 function openCart(){
 
     document
@@ -673,6 +979,8 @@ function openCart(){
 
 }
 
+/* CLOSE CART */
+
 function closeCart(){
 
     document
@@ -680,6 +988,8 @@ function closeCart(){
     .classList.remove("active");
 
 }
+
+/* WHATSAPP CHECKOUT */
 
 function checkoutWhatsApp(){
 
