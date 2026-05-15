@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noir Cafe</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.92);
+    border-bottom:1px solid #2c1b14;
+    z-index:1000;
+}
+
+.logo h1{
+    color:#d8a07d;
+    font-size:34px;
+}
+
+.logo p{
+    color:#ccc;
+    font-size:12px;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d8a07d;
+}
+
+#menuBtn{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1400&auto=format&fit=crop')
+    center/cover;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.hero h2{
+    font-size:65px;
+    color:#d8a07d;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.6;
+    color:#ddd;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#d8a07d;
+    color:#111;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+}
+
+/* MENU */
+
+.menu{
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#141414;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid #332018;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.card.big{
+    grid-column:span 2;
+}
+
+.card h2{
+    color:#d8a07d;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.card p{
+    color:#888;
+    margin-bottom:20px;
+}
+
+/* ITEM */
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px dashed #444;
+    gap:20px;
+}
+
+.item-info h3{
+    font-size:18px;
+    margin-bottom:4px;
+}
+
+.item-info p{
+    font-size:13px;
+    color:#888;
+}
+
+.price-add{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.price-add b{
+    color:#d8a07d;
+    font-size:18px;
+}
+
+.add-btn{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:#d8a07d;
+    color:#111;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(216,160,125,.25);
+}
+
+.add-btn:hover{
+    transform:rotate(90deg) scale(1.1);
+    background:white;
+}
+
+/* FLOATING CART */
+
+.floating-cart{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
+    border:none;
+    border-radius:50%;
+    background:#d8a07d;
+    color:#111;
+    font-size:22px;
+    cursor:pointer;
+    z-index:3000;
+    font-weight:bold;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.floating-cart span{
+    font-size:13px;
+}
+
+/* CART */
+
+.cart-box{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:380px;
+    max-width:100%;
+    height:100%;
+    background:#111;
+    z-index:4000;
+    transition:.4s;
+    padding:25px;
+    overflow-y:auto;
+}
+
+.cart-box.active{
+    right:0;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.cart-header h2{
+    color:#d8a07d;
+}
+
+.cart-header button{
+    background:red;
+    color:white;
+    border:none;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #333;
+}
+
+.cart-total{
+    margin-top:25px;
+    font-size:22px;
+    color:#d8a07d;
+    font-weight:bold;
+}
+
+.checkout-btn{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#25D366;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:80px 8%;
+    text-align:center;
+    background:#111;
+}
+
+.contact h2{
+    color:#d8a07d;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#ccc;
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:black;
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    #menuBtn{
+        display:block;
+    }
+
+    nav{
+        position:absolute;
+        top:80px;
+        right:8%;
+        width:220px;
+        background:#111;
+        border-radius:15px;
+        padding:20px;
+        flex-direction:column;
+        display:none;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .hero h2{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+        padding:60px 5%;
+    }
+
+    .card.big{
+        grid-column:span 1;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>NC</h1>
+<p>NOIR CAFE</p>
+</div>
+
+<button id="menuBtn">☰</button>
+
+<nav id="nav">
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Good Food.<br>Good Mood.</h2>
+
+<p>
+Luxury burgers, kaak, sandwiches and more.
+Fresh ingredients with premium taste.
+</p>
+
+<a href="#menu" class="btn">
+View Menu
+</a>
+
+</div>
+
+</section>
+
+<section class="menu" id="menu">
+
+<!-- BURGERS -->
+
+<div class="card">
+
+<h2>Burgers</h2>
+
+<p>All burgers are served with fries</p>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Noir Burger</h3>
+<p>Special burger with sauce</p>
+</div>
+
+<div class="price-add">
+<b>$10</b>
+
+<button class="add-btn"
+onclick="addToCart('Noir Burger',10)">
++
+</button>
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Crispy Chicken Burger</h3>
+<p>Crispy chicken with fries</p>
+</div>
+
+<div class="price-add">
+<b>$8</b>
+
+<button class="add-btn"
+onclick="addToCart('Crispy Chicken Burger',8)">
++
+</button>
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Lebanese Burger</h3>
+<p>Classic Lebanese taste</p>
+</div>
+
+<div class="price-add">
+<b>$6</b>
+
+<button class="add-btn"
+onclick="addToCart('Lebanese Burger',6)">
++
+</button>
+</div>
+
+</div>
+
+</div>
+
+<!-- KAAK -->
+
+<div class="card">
+
+<h2>Kaak Selection</h2>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Zaatar</h3>
+<p>Fresh baked kaak</p>
+</div>
+
+<div class="price-add">
+<b>$2</b>
+
+<button class="add-btn"
+onclick="addToCart('Zaatar',2)">
++
+</button>
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Pizza Kaak</h3>
+<p>Pizza style kaak</p>
+</div>
+
+<div class="price-add">
+<b>$6</b>
+
+<button class="add-btn"
+onclick="addToCart('Pizza Kaak',6)">
++
+</button>
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Steak Kaak</h3>
+<p>Steak with cheese</p>
+</div>
+
+<div class="price-add">
+<b>$7</b>
+
+<button class="add-btn"
+onclick="addToCart('Steak Kaak',7)">
++
+</button>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FLOATING CART -->
+
+<button class="floating-cart"
+onclick="openCart()">
+
+🛒 <span id="cart-count">0</span>
+
+</button>
+
+<!-- CART -->
+
+<div class="cart-box" id="cartBox">
+
+<div class="cart-header">
+
+<h2>Your Cart</h2>
+
+<button onclick="closeCart()">
+✕
+</button>
+
+</div>
+
+<div id="cart-items"></div>
+
+<div class="cart-total">
+Total: $<span id="cart-total">0</span>
+</div>
+
+<button class="checkout-btn"
+onclick="checkoutWhatsApp()">
+
+Checkout On WhatsApp
+
+</button>
+
+</div>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Order Now</h2>
+
+<p>Fast delivery available</p>
+
+</section>
+
+<footer>
+
+© 2026 Noir Cafe — All Rights Reserved
+
+</footer>
+
+<script>
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const nav =
+document.getElementById("nav");
+
+menuBtn.addEventListener("click",()=>{
+
+    nav.classList.toggle("active");
+
+});
+
+/* CART */
+
+let cart = [];
+
+function addToCart(name,price){
+
+    const existing =
+    cart.find(item => item.name === name);
+
+    if(existing){
+
+        existing.qty++;
+
+    }else{
+
+        cart.push({
+            name:name,
+            price:price,
+            qty:1
+        });
+
+    }
+
+    updateCart();
+}
+
+function updateCart(){
+
+    const cartItems =
+    document.getElementById("cart-items");
+
+    const cartCount =
+    document.getElementById("cart-count");
+
+    const cartTotal =
+    document.getElementById("cart-total");
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+    let count = 0;
+
+    cart.forEach(item=>{
+
+        total += item.price * item.qty;
+        count += item.qty;
+
+        cartItems.innerHTML += `
+
+        <div class="cart-item">
+
+            <div>
+                <h4>${item.name}</h4>
+                <small>
+                ${item.qty} x $${item.price}
+                </small>
+            </div>
+
+            <strong>
+            $${item.price * item.qty}
+            </strong>
+
+        </div>
+
+        `;
+    });
+
+    cartCount.innerText = count;
+    cartTotal.innerText = total;
+}
+
+function openCart(){
+
+    document
+    .getElementById("cartBox")
+    .classList.add("active");
+
+}
+
+function closeCart(){
+
+    document
+    .getElementById("cartBox")
+    .classList.remove("active");
+
+}
+
+function checkoutWhatsApp(){
+
+    if(cart.length === 0){
+
+        alert("Cart is empty");
+        return;
+
+    }
+
+    let message =
+    "Hello Noir Cafe 👋%0A%0AI want to order:%0A";
+
+    let total = 0;
+
+    cart.forEach(item=>{
+
+        message +=
+        `%0A• ${item.name} x${item.qty} = $${item.price * item.qty}`;
+
+        total += item.price * item.qty;
+
+    });
+
+    message += `%0A%0ATotal: $${total}`;
+
+    window.open(
+    `https://wa.me/96170157841?text=${message}`
+    );
+
+}
+
+</script>
+
+</body>
+</html>
