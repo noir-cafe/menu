@@ -385,6 +385,23 @@ footer{
     font-weight:bold;
 }
 
+.note-box{
+    width:100%;
+    margin-top:10px;
+    background:#1d1d1d;
+    color:white;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:10px;
+    resize:none;
+    outline:none;
+    font-size:13px;
+}
+
+.note-box:focus{
+    border-color:#d8a07d;
+}
+
 </style>
 </head>
 
@@ -642,7 +659,7 @@ onclick="addToCart('Jalapeño Hot Dog',6)">
 <div class="price-add">
 <b>$2</b>
 <button class="add-btn"
-onclick="addToCart('Zaatar',2)">
+onclick="addToCart('kaak Zaatar',2)">
 +
 </button>
 </div>
@@ -654,7 +671,7 @@ onclick="addToCart('Zaatar',2)">
 <div class="price-add">
 <b>$2.5</b>
 <button class="add-btn"
-onclick="addToCart('Zaatar W Veggies',2.5)">
+onclick="addToCart('kaak Zaatar W Veggies',2.5)">
 +
 </button>
 </div>
@@ -666,7 +683,7 @@ onclick="addToCart('Zaatar W Veggies',2.5)">
 <div class="price-add">
 <b>$3.5</b>
 <button class="add-btn"
-onclick="addToCart('Zaatar W Cheese',3.5)">
+onclick="addToCart('kaak Zaatar W Cheese',3.5)">
 +
 </button>
 </div>
@@ -678,7 +695,7 @@ onclick="addToCart('Zaatar W Cheese',3.5)">
 <div class="price-add">
 <b>$3</b>
 <button class="add-btn"
-onclick="addToCart('Zaatar W Labneh',3)">
+onclick="addToCart('kaak Zaatar W Labneh',3)">
 +
 </button>
 </div>
@@ -690,7 +707,7 @@ onclick="addToCart('Zaatar W Labneh',3)">
 <div class="price-add">
 <b>$4</b>
 <button class="add-btn"
-onclick="addToCart('Labneh W Veggies',4)">
+onclick="addToCart('kaak Labneh W Veggies',4)">
 +
 </button>
 </div>
@@ -702,7 +719,7 @@ onclick="addToCart('Labneh W Veggies',4)">
 <div class="price-add">
 <b>$3.5</b>
 <button class="add-btn"
-onclick="addToCart('Cheese',3.5)">
+onclick="addToCart('kaak Cheese',3.5)">
 +
 </button>
 </div>
@@ -714,7 +731,7 @@ onclick="addToCart('Cheese',3.5)">
 <div class="price-add">
 <b>$4</b>
 <button class="add-btn"
-onclick="addToCart('Cheese W Picon',4)">
+onclick="addToCart('kaak Cheese W Picon',4)">
 +
 </button>
 </div>
@@ -726,7 +743,7 @@ onclick="addToCart('Cheese W Picon',4)">
 <div class="price-add">
 <b>$4</b>
 <button class="add-btn"
-onclick="addToCart('Halloumi',4)">
+onclick="addToCart('kaak Halloumi',4)">
 +
 </button>
 </div>
@@ -738,7 +755,7 @@ onclick="addToCart('Halloumi',4)">
 <div class="price-add">
 <b>$5</b>
 <button class="add-btn"
-onclick="addToCart('Turkey W Cheese',5)">
+onclick="addToCart('kaak Turkey W Cheese',5)">
 +
 </button>
 </div>
@@ -750,7 +767,7 @@ onclick="addToCart('Turkey W Cheese',5)">
 <div class="price-add">
 <b>$5</b>
 <button class="add-btn"
-onclick="addToCart('Sujuk',5)">
+onclick="addToCart('kaak Sujuk',5)">
 +
 </button>
 </div>
@@ -762,7 +779,7 @@ onclick="addToCart('Sujuk',5)">
 <div class="price-add">
 <b>$6</b>
 <button class="add-btn"
-onclick="addToCart('Pizza',6)">
+onclick="addToCart('kaak Pizza',6)">
 +
 </button>
 </div>
@@ -774,7 +791,7 @@ onclick="addToCart('Pizza',6)">
 <div class="price-add">
 <b>$7</b>
 <button class="add-btn"
-onclick="addToCart('Steak',7)">
+onclick="addToCart('kaak Steak',7)">
 +
 </button>
 </div>
@@ -786,7 +803,7 @@ onclick="addToCart('Steak',7)">
 <div class="price-add">
 <b>$4</b>
 <button class="add-btn"
-onclick="addToCart('Nutella',4)">
+onclick="addToCart('kaak Nutella',4)">
 +
 </button>
 </div>
@@ -846,7 +863,8 @@ Checkout On WhatsApp
 
 <footer>
 
-© 2026 Noir Cafe — All Rights Reserved
+© 2026 Noir Cafe — All Rights Reserved <br>
+powered by Gbf-Services
 
 </footer>
 
@@ -890,8 +908,6 @@ function addToCart(name,price){
     updateCart();
 }
 
-/* UPDATE CART */
-
 function updateCart(){
 
     const cartItems =
@@ -927,17 +943,19 @@ function updateCart(){
 
                 <div class="qty-box">
 
-                    <button onclick="changeQty(${index},-1)">
-                    −
-                    </button>
+                    <button onclick="changeQty(${index},-1)">−</button>
 
                     <span>${item.qty}</span>
 
-                    <button onclick="changeQty(${index},1)">
-                    +
-                    </button>
+                    <button onclick="changeQty(${index},1)">+</button>
 
                 </div>
+
+                <textarea
+                class="note-box"
+                placeholder="Add note: no onions, extra sauce..."
+                oninput="saveNote(${index}, this.value)"
+                >${item.note || ""}</textarea>
 
             </div>
 
@@ -967,6 +985,11 @@ function changeQty(index,change){
     }
 
     updateCart();
+}
+function saveNote(index,value){
+
+    cart[index].note = value;
+
 }
 
 /* OPEN CART */
@@ -1007,8 +1030,12 @@ function checkoutWhatsApp(){
 
     cart.forEach(item=>{
 
-        message +=
-        `%0A• ${item.name} x${item.qty} = $${item.price * item.qty}`;
+       message +=
+`%0A• ${item.name} x${item.qty} = $${item.price * item.qty}`;
+
+if(item.note && item.note.trim() !== ""){
+    message += `%0A  Note: ${item.note}`;
+}
 
         total += item.price * item.qty;
 
@@ -1019,6 +1046,7 @@ function checkoutWhatsApp(){
     window.open(
     `https://wa.me/96170157841?text=${message}`
     );
+    
 
 }
 
