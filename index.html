@@ -1,37 +1,1375 @@
-<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>Noir Cafe</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;scroll-behavior:smooth}body{background:#0b0b0b;color:#fff}header{position:fixed;top:0;width:100%;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.92);border-bottom:1px solid #2c1b14;z-index:1000}.logo h1{color:#d8a07d;font-size:34px}.logo p{color:#ccc;font-size:12px}nav{display:flex;gap:25px}nav a{color:#fff;text-decoration:none;font-weight:700;transition:.3s}nav a:hover{color:#d8a07d}#menuBtn{display:none;background:0 0;border:none;color:#fff;font-size:30px;cursor:pointer}.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1400&auto=format&fit=crop') center/cover;display:flex;align-items:center;padding:0 8%}.hero-content{max-width:600px}.hero h2{font-size:65px;color:#d8a07d;margin-bottom:15px}.hero p{font-size:20px;line-height:1.6;color:#ddd;margin-bottom:30px}.btn{display:inline-block;padding:14px 28px;background:#d8a07d;color:#111;text-decoration:none;border-radius:40px;font-weight:700}.menu{padding:80px 8%;display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.card{background:#141414;padding:30px;border-radius:18px;border:1px solid #332018;box-shadow:0 10px 30px rgba(0,0,0,.4)}.card.big{grid-column:span 2}.card h2{color:#d8a07d;margin-bottom:20px;font-size:30px}.card p{color:#888;margin-bottom:20px}.item{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px dashed #444;gap:20px}.item-info h3{font-size:18px;margin-bottom:4px}.item-info p{font-size:13px;color:#888}.price-add{display:flex;align-items:center;gap:14px}.price-add b{color:#d8a07d;font-size:18px}.add-btn{width:38px;height:38px;border:none;border-radius:50%;background:#d8a07d;color:#111;font-size:24px;font-weight:700;cursor:pointer;transition:.3s;box-shadow:0 5px 15px rgba(216,160,125,.25)}.add-btn:hover{transform:rotate(90deg) scale(1.1);background:#fff}.floating-cart{position:fixed;bottom:25px;right:25px;width:65px;height:65px;border:none;border-radius:50%;background:#d8a07d;color:#111;font-size:22px;cursor:pointer;z-index:3000;font-weight:700;box-shadow:0 10px 25px rgba(0,0,0,.35)}.floating-cart span{font-size:13px}.cart-box{position:fixed;top:0;right:-100%;width:380px;max-width:100%;height:100%;background:#111;z-index:4000;transition:.4s;padding:25px;overflow-y:auto}.cart-box.active{right:0}.cart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.cart-header h2{color:#d8a07d}.cart-header button{background:red;color:#fff;border:none;width:35px;height:35px;border-radius:50%;cursor:pointer}.cart-item{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #333}.cart-total{margin-top:25px;font-size:22px;color:#d8a07d;font-weight:700}.checkout-btn{width:100%;margin-top:20px;padding:15px;border:none;border-radius:14px;background:#25d366;color:#fff;font-size:16px;font-weight:700;cursor:pointer}.contact{padding:80px 8%;text-align:center;background:#111}.contact h2{color:#d8a07d;font-size:40px;margin-bottom:15px}.contact p{color:#ccc;margin-bottom:20px}footer{text-align:center;padding:25px;background:#000;color:#777}@media(max-width:768px){#menuBtn{display:block}nav{position:absolute;top:80px;right:8%;width:220px;background:#111;border-radius:15px;padding:20px;flex-direction:column;display:none}nav.active{display:flex}.hero h2{font-size:42px}.hero p{font-size:17px}.menu{grid-template-columns:1fr;padding:60px 5%}.card.big{grid-column:span 1}}.cart-left{display:flex;flex-direction:column;gap:8px}.qty-box{display:flex;align-items:center;gap:10px}.qty-box button{width:28px;height:28px;border:none;border-radius:50%;background:#d8a07d;color:#111;font-size:18px;font-weight:700;cursor:pointer}.qty-box span{min-width:20px;text-align:center;font-weight:700}.note-box{width:100%;margin-top:10px;background:#1d1d1d;color:#fff;border:1px solid #333;border-radius:12px;padding:10px;resize:none;outline:0;font-size:13px}.note-box:focus{border-color:#d8a07d}.footer-social{text-decoration:none;color:#d8a07d;font-weight:700;transition:.3s}.footer-social:hover{color:#fff}</style><header><div class=logo><h1>NC</h1><p>NOIR CAFE</div><button id=menuBtn>☰</button><nav id=nav><a href=#menu>Menu</a> <a href=https://wa.me/96170157841>Contact</a></nav></header><section class=hero><div class=hero-content><h2>Good Food.<br>Good Mood.</h2><p>Luxury burgers, kaak, sandwiches and more. Fresh ingredients with premium taste.</p><a href=#menu class=btn>View Menu</a></div></section><section class=menu id=menu><div class=card><h2>Starters</h2><div class=item><span>Chicken & Cheese Poutine</span><div class=price-add><b>$7</b> <button onclick='addToCart("Chicken & Cheese Poutine",7)'class=add-btn>+</button></div></div><div class=item><span>Cheese Poutine</span><div class=price-add><b>$5</b> <button onclick='addToCart("Cheese Poutine",5)'class=add-btn>+</button></div></div><div class=item><span>French Fries</span><div class=price-add><b>$2.5</b> <button onclick='addToCart("French Fries",2.5)'class=add-btn>+</button></div></div><div class=item><span>Loaded Fries</span><div class=price-add><b>$5</b> <button onclick='addToCart("Loaded Fries",5)'class=add-btn>+</button></div></div></div><div class=card><h2>Burgers</h2><p>All burgers are served with fries<div class=item><span>Noir Burger</span><div class=price-add><b>$10</b> <button onclick='addToCart("Noir Burger",10)'class=add-btn>+</button></div></div><div class=item><span>Ham & Cheese Burger</span><div class=price-add><b>$8</b> <button onclick='addToCart("Ham & Cheese Burger",8)'class=add-btn>+</button></div></div><div class=item><span>Crispy Chicken Burger</span><div class=price-add><b>$8</b> <button onclick='addToCart("Crispy Chicken Burger",8)'class=add-btn>+</button></div></div><div class=item><span>Lebanese Burger</span><div class=price-add><b>$6</b> <button onclick='addToCart("Lebanese Burger",6)'class=add-btn>+</button></div></div><div class=item><span>Grilled Chicken Breast Burger</span><div class=price-add><b>$6</b> <button onclick='addToCart("Grilled Chicken Breast Burger",6)'class=add-btn>+</button></div></div></div><div class=card><h2>Sandwiches</h2><p>All sandwiches are served with fries<div class=item><span>Steak Sandwich</span><div class=price-add><b>$8</b> <button onclick='addToCart("Steak Sandwich",8)'class=add-btn>+</button></div></div><div class=item><span>Fajita Sandwich</span><div class=price-add><b>$7</b> <button onclick='addToCart("Fajita Sandwich",7)'class=add-btn>+</button></div></div><div class=item><span>Submarine Sandwich</span><div class=price-add><b>$7</b> <button onclick='addToCart("Submarine Sandwich",7)'class=add-btn>+</button></div></div></div><div class=card><h2>Hot Dogs</h2><div class=item><span>Classic Hot Dog</span><div class=price-add><b>$5</b> <button onclick='addToCart("Classic Hot Dog",5)'class=add-btn>+</button></div></div><div class=item><span>Jalapeño Hot Dog</span><div class=price-add><b>$6</b> <button onclick='addToCart("Jalapeño Hot Dog",6)'class=add-btn>+</button></div></div></div><div class="card big"id=kaak><h2>Kaak Selection</h2><div class=item><span>Zaatar</span><div class=price-add><b>$2</b> <button onclick='addToCart("kaak Zaatar",2)'class=add-btn>+</button></div></div><div class=item><span>Zaatar W Veggies</span><div class=price-add><b>$2.5</b> <button onclick='addToCart("kaak Zaatar W Veggies",2.5)'class=add-btn>+</button></div></div><div class=item><span>Zaatar W Cheese</span><div class=price-add><b>$3.5</b> <button onclick='addToCart("kaak Zaatar W Cheese",3.5)'class=add-btn>+</button></div></div><div class=item><span>Zaatar W Labneh</span><div class=price-add><b>$3</b> <button onclick='addToCart("kaak Zaatar W Labneh",3)'class=add-btn>+</button></div></div><div class=item><span>Labneh W Veggies</span><div class=price-add><b>$4</b> <button onclick='addToCart("kaak Labneh W Veggies",4)'class=add-btn>+</button></div></div><div class=item><span>Cheese</span><div class=price-add><b>$3.5</b> <button onclick='addToCart("kaak Cheese",3.5)'class=add-btn>+</button></div></div><div class=item><span>Cheese W Picon</span><div class=price-add><b>$4</b> <button onclick='addToCart("kaak Cheese W Picon",4)'class=add-btn>+</button></div></div><div class=item><span>Halloumi</span><div class=price-add><b>$4</b> <button onclick='addToCart("kaak Halloumi",4)'class=add-btn>+</button></div></div><div class=item><span>Turkey W Cheese</span><div class=price-add><b>$5</b> <button onclick='addToCart("kaak Turkey W Cheese",5)'class=add-btn>+</button></div></div><div class=item><span>Sujuk</span><div class=price-add><b>$5</b> <button onclick='addToCart("kaak Sujuk",5)'class=add-btn>+</button></div></div><div class=item><span>Pizza</span><div class=price-add><b>$6</b> <button onclick='addToCart("kaak Pizza",6)'class=add-btn>+</button></div></div><div class=item><span>Steak</span><div class=price-add><b>$7</b> <button onclick='addToCart("kaak Steak",7)'class=add-btn>+</button></div></div><div class=item><span>Nutella</span><div class=price-add><b>$4</b> <button onclick='addToCart("kaak Nutella",4)'class=add-btn>+</button></div></div></div><div class=card><h2>Desserts</h2><div class=item><span>Chocolate Ball</span><div class=price-add><b>$5</b> <button onclick='addToCart("Desserts Chocolate Ball",5)'class=add-btn>+</button></div></div><div class=item><span>Noir Tiramisu</span><div class=price-add><b>$5.5</b> <button onclick='addToCart("Desserts Noir Tiramisu",5.5)'class=add-btn>+</button></div></div></div><div class=card><h2>Hot Beverages</h2><div class=item><span>Lebanese Coffee</span><div class=price-add><b>$3</b> <button onclick='addToCart("Hot Lebanese Coffee",3)'class=add-btn>+</button></div></div><div class=item><span>Cappuccino</span><div class=price-add><b>$3</b> <button onclick='addToCart("Hot Cappuccino",3)'class=add-btn>+</button></div></div><div class=item><span>Cafe Blanc</span><div class=price-add><b>$2</b> <button onclick='addToCart("Hot Cafe Blanc",2)'class=add-btn>+</button></div></div><div class=item><span>Hot Chocolate</span><div class=price-add><b>$2</b> <button onclick='addToCart("Hot Chocolate",2)'class=add-btn>+</button></div></div><div class=item><span>Tea</span><div class=price-add><b>$2</b> <button onclick='addToCart("Hot Tea",2)'class=add-btn>+</button></div></div><div class=item><span>Nescafe</span><div class=price-add><b>$2</b> <button onclick='addToCart("Hot Nescafe",2)'class=add-btn>+</button></div></div><div class=item><span>American Coffee</span><div class=price-add><b>$2</b> <button onclick='addToCart("Hot American Coffee",2)'class=add-btn>+</button></div></div></div><div class=card><h2>Cold Beverages</h2><div class=item><span>Beer</span><div class=price-add><b>$3</b> <button onclick='addToCart("Cold Beer",3)'class=add-btn>+</button></div></div><div class=item><span>Sparkling Water</span><div class=price-add><b>$2</b> <button onclick='addToCart("Cold Sparkling Water",2)'class=add-btn>+</button></div></div><div class=item><span>XL</span><div class=price-add><b>$2</b> <button onclick='addToCart("Cold XL",2)'class=add-btn>+</button></div></div><div class=item><span>Soft Drinks</span><div class=price-add><b>$1.5</b> <button onclick='addToCart("Cold Soft Drinks",1.5)'class=add-btn>+</button></div></div><div class=item><span>Water</span><div class=price-add><b>$1</b> <button onclick='addToCart("Cold Water",1)'class=add-btn>+</button></div></div></div><div class=card><h2>Argile</h2><div class=item><span>Argile</span><div class=price-add><b>$5</b> <button onclick='addToCart("Argile",5)'class=add-btn>+</button></div></div></div></section><button onclick=openCart() class=floating-cart>🛒 <span id=cart-count>0</span></button><div class=cart-box id=cartBox><div class=cart-header><h2>Your Cart</h2><button onclick=closeCart()>✕</button></div><div id=cart-items></div><div class=cart-total>Total: $<span id=cart-total>0</span></div><button onclick=checkoutWhatsApp() class=checkout-btn>Checkout On WhatsApp</button></div><section class=contact id=contact><h2>Order Now</h2><p>Fast delivery available</section><footer>© 2026 Noir Cafe — All Rights Reserved<br><br>powered by <a href=https://wa.me/96103226752 style=text-decoration:none;color:#777>Gbf-Services</a><br><br><a href=https://instagram.com/noir.cafe_26 class=footer-social target=_blank><img src=instagram.png style=vertical-align:middle;margin-right:5px width=20></a></footer><script>const menuBtn=document.getElementById("menuBtn"),nav=document.getElementById("nav");menuBtn.addEventListener("click",()=>{nav.classList.toggle("active")});let cart=[];function addToCart(e,t){const n=cart.find(t=>t.name===e);n?n.qty++:cart.push({name:e,price:t,qty:1}),updateCart()}function updateCart(){const n=document.getElementById("cart-items"),t=document.getElementById("cart-count"),e=document.getElementById("cart-total");n.innerHTML="";let a=0,c=0;cart.forEach((t,e)=>{a+=t.price*t.qty,c+=t.qty,n.innerHTML+=`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Noir Cafe</title>
+
+<!-- GOOGLE FONT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,140,0,.12),
+    transparent 25%),
+
+    radial-gradient(circle at bottom right,
+    rgba(216,160,125,.12),
+    transparent 25%),
+
+    #0b0b0b;
+
+    color:white;
+    overflow-x:hidden;
+}
+
+/* GLOW BLOBS */
+
+.blob{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(100px);
+    z-index:-1;
+    opacity:.4;
+}
+
+.blob1{
+    width:300px;
+    height:300px;
+    background:#ff8800;
+    top:-100px;
+    left:-100px;
+}
+
+.blob2{
+    width:350px;
+    height:350px;
+    background:#d8a07d;
+    bottom:-100px;
+    right:-100px;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    z-index:1000;
+}
+
+.logo h1{
+    color:#ffb36b;
+    font-size:36px;
+    font-weight:800;
+}
+
+.logo p{
+    color:#ccc;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffb36b;
+}
+
+#menuBtn{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:32px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.72),
+    rgba(0,0,0,.88)),
+
+    url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1400&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 8%;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero h2{
+    font-size:78px;
+    color:#ffb36b;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+    color:#ddd;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:15px 34px;
+
+    background:
+    linear-gradient(135deg,#ffb36b,#d8a07d);
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 25px rgba(255,179,107,.2);
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.03);
+
+    box-shadow:
+    0 0 25px rgba(255,179,107,.35);
+}
+
+/* MENU */
+
+.menu{
+    padding:90px 8%;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+}
+
+.card{
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    transition:.4s;
+
+    animation:fadeUp .8s ease;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.35);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 40px rgba(255,140,0,.12),
+    0 0 30px rgba(216,160,125,.08);
+}
+
+.card.big{
+    grid-column:span 2;
+}
+
+.card h2{
+    color:#ffb36b;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.card p{
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+/* ITEM */
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 0;
+
+    border-bottom:1px dashed rgba(255,255,255,.12);
+
+    transition:.3s;
+}
+
+.item:hover{
+    transform:translateX(6px);
+}
+
+.item-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.item img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.item-info h3{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.item-info p{
+    font-size:13px;
+    color:#888;
+    margin:0;
+}
+
+.price-add{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.price-add b{
+    color:#ffb36b;
+    font-size:19px;
+}
+
+.add-btn{
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    background:
+    linear-gradient(135deg,#ffb36b,#d8a07d);
+
+    color:#111;
+
+    font-size:24px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+    0 5px 15px rgba(216,160,125,.25);
+}
+
+.add-btn:hover{
+    transform:rotate(90deg) scale(1.12);
+
+    box-shadow:
+    0 0 20px rgba(255,179,107,.6);
+
+    background:white;
+}
+
+/* FLOATING CART */
+
+.floating-cart{
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:70px;
+    height:70px;
+
+    border:none;
+    border-radius:50%;
+
+    background:
+    linear-gradient(135deg,#ffb36b,#d8a07d);
+
+    color:#111;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:3000;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.35);
+}
+
+.floating-cart:hover{
+    transform:scale(1.1);
+}
+
+.floating-cart span{
+    font-size:13px;
+}
+
+/* CART */
+
+.cart-box{
+    position:fixed;
+
+    top:0;
+    right:-100%;
+
+    width:380px;
+    max-width:100%;
+    height:100%;
+
+    background:#111;
+
+    z-index:4000;
+
+    transition:.4s;
+
+    padding:25px;
+
+    overflow-y:auto;
+}
+
+.cart-box.active{
+    right:0;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.cart-header h2{
+    color:#ffb36b;
+}
+
+.cart-header button{
+    background:red;
+    color:white;
+    border:none;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #333;
+}
+
+.cart-left{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.qty-box button{
+    width:28px;
+    height:28px;
+    border:none;
+    border-radius:50%;
+    background:#ffb36b;
+    color:#111;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.qty-box span{
+    min-width:20px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.note-box{
+    width:100%;
+    margin-top:10px;
+    background:#1d1d1d;
+    color:white;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:10px;
+    resize:none;
+    outline:none;
+    font-size:13px;
+}
+
+.note-box:focus{
+    border-color:#ffb36b;
+}
+
+.cart-total{
+    margin-top:25px;
+    font-size:22px;
+    color:#ffb36b;
+    font-weight:bold;
+}
+
+.checkout-btn{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#25D366;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+
+    padding:40px 20px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #161616,
+    #24160f,
+    #111
+    );
+
+    border-top:
+    1px solid rgba(255,255,255,.08);
+
+    color:#aaa;
+
+    position:relative;
+
+    overflow:hidden;
+     border:1px solid rgba(255,255,255,.08);
+     box-shadow: 0 10px 35px rgba(0,0,0,.35);
+     border-radius:25px;
+    
+    
+}
+
+.contact h2{
+    color:#ffb36b;
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#ccc;
+}
+
+/* LOCATION */
+
+.location{
+   text-align:center;
+
+    padding:40px 20px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #161616,
+    #24160f,
+    #111
+    );
+
+    border-top:
+    1px solid rgba(255,255,255,.08);
+
+    color:#aaa;
+
+    position:relative;
+
+    overflow:hidden;
+    
+    border:1px solid rgba(255,255,255,.08);
+     box-shadow: 0 10px 35px rgba(0,0,0,.35);
+     border-radius:25px;
+}
+
+.location h2{
+    color:#ffb36b;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.location p{
+    color:#ccc;
+    margin-bottom:25px;
+}
+
+.location iframe{
+    border-radius:25px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+
+    padding:40px 20px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #161616,
+    #24160f,
+    #111
+    );
+
+    border-top:
+    1px solid rgba(255,255,255,.08);
+
+    color:#aaa;
+
+    position:relative;
+
+    overflow:hidden;
+    
+    border:1px solid rgba(255,255,255,.08);
+     box-shadow: 0 10px 35px rgba(0,0,0,.35);
+     border-radius:25px;
+}
+footer::before{
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    background:
+    rgba(255,179,107,.12);
+
+    border-radius:50%;
+
+    filter:blur(100px);
+
+    top:-120px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+footer a{
+    color:#ffb36b;
+    text-decoration:none;
+    transition:.3s;
+}
+
+footer a:hover{
+    color:white;
+}
+.footer-social{
+    text-decoration:none;
+    color:#ffb36b;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.footer-social:hover{
+    color:white;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    #menuBtn{
+        display:block;
+    }
+
+    nav{
+        position:absolute;
+        top:80px;
+        right:8%;
+
+        width:220px;
+
+        background:#111;
+
+        border-radius:15px;
+
+        padding:20px;
+
+        flex-direction:column;
+
+        display:none;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .hero h2{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+        padding:70px 5%;
+    }
+
+    .card.big{
+        grid-column:span 1;
+    }
+
+    .item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .price-add{
+        width:100%;
+        justify-content:space-between;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<header>
+
+<div class="logo">
+<h1>NC</h1>
+<p>NOIR CAFE</p>
+</div>
+
+<button id="menuBtn">☰</button>
+
+<nav id="nav">
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Good Food.<br>Good Mood.</h2>
+
+<p>
+Luxury burgers, kaak, sandwiches and more.
+Fresh ingredients with premium taste.
+</p>
+
+<a href="#menu" class="btn">
+View Menu
+</a>
+
+</div>
+
+</section>
+
+<section class="menu" id="menu">
+
+<!-- STARTERS -->
+
+<!-- =========================
+     STARTERS
+========================= -->
+
+<div class="card">
+
+<h2>Starters</h2>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Chicken & Cheese Poutine</h3>
+<p>Crispy fries loaded with cheese</p>
+</div>
+
+<div class="price-add">
+<b>$7</b>
+
+<button class="add-btn"
+onclick="addToCart('Chicken & Cheese Poutine',7)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Cheese Poutine</h3>
+<p>Cheese loaded fries</p>
+</div>
+
+<div class="price-add">
+<b>$5</b>
+
+<button class="add-btn"
+onclick="addToCart('Cheese Poutine',5)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>French Fries</h3>
+<p>Golden crispy fries</p>
+</div>
+
+<div class="price-add">
+<b>$2.5</b>
+
+<button class="add-btn"
+onclick="addToCart('French Fries',2.5)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Loaded Fries</h3>
+<p>Fries with premium toppings</p>
+</div>
+
+<div class="price-add">
+<b>$5</b>
+
+<button class="add-btn"
+onclick="addToCart('Loaded Fries',5)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     BURGERS
+========================= -->
+
+<div class="card">
+
+<h2>Burgers</h2>
+
+<p>All burgers are served with fries</p>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Noir Burger</h3>
+<p>Premium beef burger with cheese</p>
+</div>
+
+<div class="price-add">
+<b>$10</b>
+
+<button class="add-btn"
+onclick="addToCart('Noir Burger',10)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Ham & Cheese Burger</h3>
+<p>Classic burger with ham & cheese</p>
+</div>
+
+<div class="price-add">
+<b>$8</b>
+
+<button class="add-btn"
+onclick="addToCart('Ham & Cheese Burger',8)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Crispy Chicken Burger</h3>
+<p>Crispy chicken with special sauce</p>
+</div>
+
+<div class="price-add">
+<b>$8</b>
+
+<button class="add-btn"
+onclick="addToCart('Crispy Chicken Burger',8)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Lebanese Burger</h3>
+<p>Traditional Lebanese style burger</p>
+</div>
+
+<div class="price-add">
+<b>$6</b>
+
+<button class="add-btn"
+onclick="addToCart('Lebanese Burger',6)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Grilled Chicken Breast Burger</h3>
+<p>Grilled chicken breast sandwich</p>
+</div>
+
+<div class="price-add">
+<b>$6</b>
+
+<button class="add-btn"
+onclick="addToCart('Grilled Chicken Breast Burger',6)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     SANDWICHES
+========================= -->
+
+<div class="card">
+
+<h2>Sandwiches</h2>
+
+<p>All sandwiches are served with fries</p>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Steak Sandwich</h3>
+<p>Juicy steak sandwich</p>
+</div>
+
+<div class="price-add">
+<b>$8</b>
+
+<button class="add-btn"
+onclick="addToCart('Steak Sandwich',8)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Fajita Sandwich</h3>
+<p>Chicken fajita sandwich</p>
+</div>
+
+<div class="price-add">
+<b>$7</b>
+
+<button class="add-btn"
+onclick="addToCart('Fajita Sandwich',7)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Submarine Sandwich</h3>
+<p>Classic submarine sandwich</p>
+</div>
+
+<div class="price-add">
+<b>$7</b>
+
+<button class="add-btn"
+onclick="addToCart('Submarine Sandwich',7)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     HOT DOGS
+========================= -->
+
+<div class="card">
+
+<h2>Hot Dogs</h2>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Classic Hot Dog</h3>
+<p>Premium sausage hot dog</p>
+</div>
+
+<div class="price-add">
+<b>$5</b>
+
+<button class="add-btn"
+onclick="addToCart('Classic Hot Dog',5)">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="item-info">
+<h3>Jalapeño Hot Dog</h3>
+<p>Hot dog with jalapeño topping</p>
+</div>
+
+<div class="price-add">
+<b>$6</b>
+
+<button class="add-btn"
+onclick="addToCart('Jalapeño Hot Dog',6)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     KAAK
+========================= -->
+
+<div class="card big">
+
+<h2>Kaak Selection</h2>
+
+<div class="item"><div class="item-info"><h3>Zaatar</h3></div><div class="price-add"><b>$2</b><button class="add-btn" onclick="addToCart('Zaatar',2)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Zaatar W Veggies</h3></div><div class="price-add"><b>$2.5</b><button class="add-btn" onclick="addToCart('Zaatar W Veggies',2.5)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Zaatar W Cheese</h3></div><div class="price-add"><b>$3.5</b><button class="add-btn" onclick="addToCart('Zaatar W Cheese',3.5)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Zaatar W Labneh</h3></div><div class="price-add"><b>$3</b><button class="add-btn" onclick="addToCart('Zaatar W Labneh',3)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Labneh W Veggies</h3></div><div class="price-add"><b>$4</b><button class="add-btn" onclick="addToCart('Labneh W Veggies',4)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Cheese</h3></div><div class="price-add"><b>$3.5</b><button class="add-btn" onclick="addToCart('Cheese',3.5)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Cheese W Picon</h3></div><div class="price-add"><b>$4</b><button class="add-btn" onclick="addToCart('Cheese W Picon',4)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Halloumi</h3></div><div class="price-add"><b>$4</b><button class="add-btn" onclick="addToCart('Halloumi',4)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Turkey W Cheese</h3></div><div class="price-add"><b>$5</b><button class="add-btn" onclick="addToCart('Turkey W Cheese',5)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Sujuk</h3></div><div class="price-add"><b>$5</b><button class="add-btn" onclick="addToCart('Sujuk',5)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Pizza</h3></div><div class="price-add"><b>$6</b><button class="add-btn" onclick="addToCart('Pizza',6)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Steak</h3></div><div class="price-add"><b>$7</b><button class="add-btn" onclick="addToCart('Steak',7)">+</button></div></div>
+
+<div class="item"><div class="item-info"><h3>Nutella</h3></div><div class="price-add"><b>$4</b><button class="add-btn" onclick="addToCart('Nutella',4)">+</button></div></div>
+
+</div>
+<!-- FLOATING CART -->
+
+<button class="floating-cart"
+onclick="openCart()">
+
+🛒 <span id="cart-count">0</span>
+
+</button>
+
+<!-- CART -->
+
+<div class="cart-box" id="cartBox">
+
+<div class="cart-header">
+
+<h2>Your Cart</h2>
+
+<button onclick="closeCart()">
+✕
+</button>
+
+</div>
+
+<div id="cart-items"></div>
+
+<div class="cart-total">
+Total: $<span id="cart-total">0</span>
+</div>
+
+<button class="checkout-btn"
+onclick="checkoutWhatsApp()">
+
+Checkout On WhatsApp
+
+</button>
+
+</div>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Order Now</h2>
+
+<p>Fast delivery available</p>
+
+</section>
+
+<!-- LOCATION -->
+
+<section class="location">
+
+<h2>📍 Find Us</h2>
+<p> Miziara - zgharta</p>
+
+
+
+<iframe
+src="https://www.google.com/maps?q=Miziara,Zgharta,Lebanon&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:20px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</section>
+
+<footer>
+
+© 2026 Noir Cafe — All Rights Reserved
+
+</footer>
+
+<script>
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const nav =
+document.getElementById("nav");
+
+menuBtn.addEventListener("click",()=>{
+
+    nav.classList.toggle("active");
+
+});
+
+/* CART */
+
+let cart = [];
+
+function addToCart(name,price){
+
+    const existing =
+    cart.find(item => item.name === name);
+
+    if(existing){
+
+        existing.qty++;
+
+    }else{
+
+        cart.push({
+            name:name,
+            price:price,
+            qty:1
+        });
+
+    }
+
+    updateCart();
+}
+
+function updateCart(){
+
+    const cartItems =
+    document.getElementById("cart-items");
+
+    const cartCount =
+    document.getElementById("cart-count");
+
+    const cartTotal =
+    document.getElementById("cart-total");
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+    let count = 0;
+
+    cart.forEach((item,index)=>{
+
+        total += item.price * item.qty;
+        count += item.qty;
+
+        cartItems.innerHTML += `
 
         <div class="cart-item">
 
             <div class="cart-left">
 
-                <h4>${t.name}</h4>
+                <h4>${item.name}</h4>
 
                 <small>
-                $${t.price} each
+                $${item.price} each
                 </small>
 
                 <div class="qty-box">
 
-                    <button onclick="changeQty(${e},-1)">−</button>
+                    <button onclick="changeQty(${index},-1)">−</button>
 
-                    <span>${t.qty}</span>
+                    <span>${item.qty}</span>
 
-                    <button onclick="changeQty(${e},1)">+</button>
+                    <button onclick="changeQty(${index},1)">+</button>
 
                 </div>
 
                 <textarea
                 class="note-box"
-                placeholder="Add note: no onions, extra sauce..."
-                oninput="saveNote(${e}, this.value)"
-                >${t.note||""}</textarea>
+                placeholder="Add note..."
+                oninput="saveNote(${index}, this.value)"
+                >${item.note || ""}</textarea>
 
             </div>
 
             <strong>
-            $${t.price*t.qty}
+            $${item.price * item.qty}
             </strong>
 
         </div>
 
-        `}),t.innerText=c,e.innerText=a}function changeQty(t,e){cart[t].qty+=e,cart[t].qty<=0&&cart.splice(t,1),updateCart()}function saveNote(t,e){cart[t].note=e}function openCart(){document.getElementById("cartBox").classList.add("active")}function closeCart(){document.getElementById("cartBox").classList.remove("active")}function checkoutWhatsApp(){if(0!==cart.length){let e="Hello Noir Cafe 👋%0A%0AI want to order:%0A",n=0;cart.forEach(t=>{e+=`%0A• ${t.name} x${t.qty} = $${t.price*t.qty}`,t.note&&""!==t.note.trim()&&(e+=`%0A  Note: ${t.note}`),n+=t.price*t.qty}),e+=`%0A%0ATotal: $${n}`,window.open(`https://wa.me/96170157841?text=${e}`)}else alert("Cart is empty")}</script>
+        `;
+    });
+
+    cartCount.innerText = count;
+    cartTotal.innerText = total;
+}
+
+function changeQty(index,change){
+
+    cart[index].qty += change;
+
+    if(cart[index].qty <= 0){
+
+        cart.splice(index,1);
+
+    }
+
+    updateCart();
+}
+
+function saveNote(index,value){
+
+    cart[index].note = value;
+
+}
+
+function openCart(){
+
+    document
+    .getElementById("cartBox")
+    .classList.add("active");
+
+}
+
+function closeCart(){
+
+    document
+    .getElementById("cartBox")
+    .classList.remove("active");
+
+}
+
+function checkoutWhatsApp(){
+
+    if(cart.length === 0){
+
+        alert("Cart is empty");
+        return;
+
+    }
+
+    let message =
+    "Hello Noir Cafe 👋%0A%0AI want to order:%0A";
+
+    let total = 0;
+
+    cart.forEach(item=>{
+
+       message +=
+`%0A• ${item.name} x${item.qty} = $${item.price * item.qty}`;
+
+if(item.note && item.note.trim() !== ""){
+    message += `%0A  Note: ${item.note}`;
+}
+
+        total += item.price * item.qty;
+
+    });
+
+    message += `%0A%0ATotal: $${total}`;
+
+    window.open(
+    `https://wa.me/96170157841?text=${message}`
+    );
+
+}
+
+</script>
+
+</body>
+</html>
