@@ -1,1 +1,1147 @@
-<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>Noir Cafe</title><link href=https://fonts.googleapis.com rel=preconnect><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"rel=stylesheet><style>*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;scroll-behavior:smooth}body{background:radial-gradient(circle at top left,rgba(255,140,0,.12),transparent 25%),radial-gradient(circle at bottom right,rgba(216,160,125,.12),transparent 25%),#0b0b0b;color:#fff;overflow-x:hidden}.blob{position:fixed;border-radius:50%;filter:blur(100px);z-index:-1;opacity:.4}.blob1{width:300px;height:300px;background:#f80;top:-100px;left:-100px}.blob2{width:350px;height:350px;background:#d8a07d;bottom:-100px;right:-100px}header{position:fixed;top:0;width:100%;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.65);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);z-index:1000}.logo h1{color:rgba(255,217,0,.726);font-size:36px;font-weight:800}.logo p{color:#ccc;font-size:12px;letter-spacing:2px}nav{display:flex;gap:25px}nav a{color:#fff;text-decoration:none;font-weight:600;transition:.3s}nav a:hover{color:rgba(255,217,0,.726)}#menuBtn{display:none;background:0 0;border:none;color:#fff;font-size:32px;cursor:pointer}.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.88)),url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1400&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;align-items:center;padding:0 8%}.hero-content{max-width:650px}.hero h2{font-size:78px;color:rgba(255,217,0,.726);line-height:1.1;margin-bottom:20px}.hero p{font-size:20px;line-height:1.8;color:#ddd;margin-bottom:35px}.btn{display:inline-block;padding:15px 34px;background:linear-gradient(135deg,rgba(255,217,0,.726),#ffd900);color:#111;text-decoration:none;border-radius:50px;font-weight:700;transition:.35s;box-shadow:0 10px 25px rgba(255,179,107,.2)}.btn:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 0 25px rgba(255,179,107,.35)}.menu{padding:90px 8%;display:grid;grid-template-columns:repeat(2,1fr);gap:28px}.card{background:rgba(255,255,255,.04);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);padding:30px;border-radius:25px;transition:.4s;animation:fadeUp .8s ease;box-shadow:0 10px 35px rgba(0,0,0,.35)}.card:hover{transform:translateY(-8px);box-shadow:0 15px 40px rgba(255,140,0,.12),0 0 30px rgba(216,160,125,.08)}.card.big{grid-column:span 2}.card h2{color:rgba(255,217,0,.726);margin-bottom:20px;font-size:32px}.card p{color:#aaa;margin-bottom:20px}.item{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 0;border-bottom:1px dashed rgba(255,255,255,.12);transition:.3s}.item:hover{transform:translateX(6px)}.item-left{display:flex;align-items:center;gap:15px}.item img{width:90px;height:90px;object-fit:cover;border-radius:18px}.item-info h3{font-size:18px;margin-bottom:5px}.item-info p{font-size:13px;color:#888;margin:0}.price-add{display:flex;align-items:center;gap:14px}.price-add b{color:rgba(255,217,0,.726);font-size:19px}.add-btn{width:42px;height:42px;border:none;border-radius:50%;background:linear-gradient(135deg,rgba(255,217,0,.726),rgba(255,217,0,.726));color:#111;font-size:24px;font-weight:700;cursor:pointer;transition:.35s;box-shadow:0 5px 15px rgba(216,160,125,.25)}.add-btn:hover{transform:rotate(90deg) scale(1.12);box-shadow:0 0 20px rgba(255,179,107,.6);background:#fff}.floating-cart{position:fixed;bottom:25px;right:25px;width:70px;height:70px;border:none;border-radius:50%;background:linear-gradient(135deg,rgba(255,217,0,.726),#d8a07d);color:#111;font-size:22px;cursor:pointer;z-index:3000;font-weight:700;transition:.3s;box-shadow:0 10px 25px rgba(0,0,0,.35)}.floating-cart:hover{transform:scale(1.1)}.floating-cart span{font-size:13px}.cart-box{position:fixed;top:0;right:-100%;width:380px;max-width:100%;height:100%;background:#111;z-index:4000;transition:.4s;padding:25px;overflow-y:auto}.cart-box.active{right:0}.cart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.cart-header h2{color:rgba(255,217,0,.726)}.cart-header button{background:red;color:#fff;border:none;width:35px;height:35px;border-radius:50%;cursor:pointer}.cart-item{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #333}.cart-left{display:flex;flex-direction:column;gap:8px}.qty-box{display:flex;align-items:center;gap:10px}.qty-box button{width:28px;height:28px;border:none;border-radius:50%;background:rgba(255,217,0,.726);color:#111;font-size:18px;font-weight:700;cursor:pointer}.qty-box span{min-width:20px;text-align:center;font-weight:700}.note-box{width:100%;margin-top:10px;background:#1d1d1d;color:#fff;border:1px solid #333;border-radius:12px;padding:10px;resize:none;outline:0;font-size:13px}.note-box:focus{border-color:rgba(255,217,0,.726)}.cart-total{margin-top:25px;font-size:22px;color:rgba(255,217,0,.726);font-weight:700}.checkout-btn{width:100%;margin-top:20px;padding:15px;border:none;border-radius:14px;background:#25d366;color:#fff;font-size:16px;font-weight:700;cursor:pointer}.contact{text-align:center;padding:40px 20px;background:linear-gradient(135deg,#161616,#24160f,#111);border-top:1px solid rgba(255,255,255,.08);color:#aaa;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 35px rgba(0,0,0,.35);border-radius:25px}.contact h2{color:rgba(255,217,0,.726);font-size:45px;margin-bottom:15px}.contact p{color:#ccc}.location{text-align:center;padding:40px 20px;background:linear-gradient(135deg,#161616,#24160f,#111);border-top:1px solid rgba(255,255,255,.08);color:#aaa;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 35px rgba(0,0,0,.35);border-radius:25px}.location h2{color:rgba(255,217,0,.726);font-size:42px;margin-bottom:15px}.location p{color:#ccc;margin-bottom:25px}.location iframe{border-radius:25px}footer{text-align:center;padding:40px 20px;background:linear-gradient(135deg,#161616,#24160f,#111);border-top:1px solid rgba(255,255,255,.08);color:#aaa;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 35px rgba(0,0,0,.35);border-radius:25px}footer::before{content:"";position:absolute;width:300px;height:300px;background:rgba(255,179,107,.12);border-radius:50%;filter:blur(100px);top:-120px;left:50%;transform:translateX(-50%)}footer a{color:rgba(255,217,0,.726);text-decoration:none;transition:.3s}footer a:hover{color:#fff}.footer-social{text-decoration:none;color:rgba(255,217,0,.726);font-weight:700;transition:.3s}.footer-social:hover{color:#fff}@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}@media(max-width:768px){#menuBtn{display:block}nav{position:absolute;top:80px;right:8%;width:220px;background:#111;border-radius:15px;padding:20px;flex-direction:column;display:none}nav.active{display:flex}.hero h2{font-size:48px}.hero p{font-size:17px}.menu{grid-template-columns:1fr;padding:70px 5%}.card.big{grid-column:span 1}.item{flex-direction:column;align-items:flex-start}.price-add{width:100%;justify-content:space-between}}</style><div class="blob blob1"></div><div class="blob blob2"></div><header><div class=logo><h1>NC</h1><p>NOIR CAFE</div><button id=menuBtn>☰</button><nav id=nav><a href=#menu>Menu</a> <a href=#contact>Contact</a></nav></header><section class=hero><div class=hero-content><h2>Good Food.<br>Good Mood.</h2><p>Luxury burgers, saj, kaak , sandwiches and more. Fresh ingredients with premium taste.</p><a href=#menu class=btn>View Menu</a></div></section><section class=menu id=menu><div class=card><h2>Starters</h2><div class=item><div class=item-info><h3>Chicken & Cheese Poutine</h3><p>Crispy fries loaded with cheese</div><div class=price-add><b>$7</b> <button onclick='addToCart("Chicken & Cheese Poutine",7)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cheese Poutine</h3><p>Cheese loaded fries</div><div class=price-add><b>$5</b> <button onclick='addToCart("Cheese Poutine",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>French Fries</h3><p>Golden crispy fries</div><div class=price-add><b>$3</b> <button onclick='addToCart("French Fries",2.5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Loaded Fries</h3><p>Fries with premium toppings</div><div class=price-add><b>$5</b> <button onclick='addToCart("Loaded Fries",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Nuggets 6psc</h3><p>6 pieces of crispy chicken nuggets</div><div class=price-add><b>$5</b> <button onclick='addToCart("Nuggets 6psc",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Sandwich Shawarma Beef</h3><p></div><div class=price-add><b>$6</b> <button onclick='addToCart("Sandwich Shawarma Beef ",6)'class=add-btn>+</button></div></div></div><div class=card><h2>Burgers</h2><p>All burgers are served with fries<div class=item><div class=item-info><h3>Noir Burger</h3><p>Premium beef burger with cheese</div><div class=price-add><b>$10</b> <button onclick='addToCart("Noir Burger",10)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Ham & Cheese Burger</h3><p>Classic burger with ham & cheese</div><div class=price-add><b>$8</b> <button onclick='addToCart("Ham & Cheese Burger",8)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Crispy Chicken Burger</h3><p>Crispy chicken with special sauce</div><div class=price-add><b>$8</b> <button onclick='addToCart("Crispy Chicken Burger",8)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Lebanese Burger</h3><p>Traditional Lebanese style burger</div><div class=price-add><b>$6</b> <button onclick='addToCart("Lebanese Burger",6)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Grilled Chicken Breast Burger</h3><p>Grilled chicken breast sandwich</div><div class=price-add><b>$6</b> <button onclick='addToCart("Grilled Chicken Breast Burger",6)'class=add-btn>+</button></div></div></div><div class=card><h2>Sandwiches</h2><p>All sandwiches are served with fries<div class=item><div class=item-info><h3>Steak Sandwich</h3><p>Juicy steak sandwich</div><div class=price-add><b>$8</b> <button onclick='addToCart("Steak Sandwich",8)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Fajita Sandwich</h3><p>Chicken fajita sandwich</div><div class=price-add><b>$7</b> <button onclick='addToCart("Fajita Sandwich",7)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Submarine Sandwich</h3><p>Classic submarine sandwich</div><div class=price-add><b>$7</b> <button onclick='addToCart("Submarine Sandwich",7)'class=add-btn>+</button></div></div></div><div class=card><h2>Hot Dogs</h2><div class=item><div class=item-info><h3>Classic Hot Dog</h3><p>Premium sausage hot dog</div><div class=price-add><b>$5</b> <button onclick='addToCart("Classic Hot Dog",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Jalapeño Hot Dog</h3><p>Hot dog with jalapeño topping</div><div class=price-add><b>$6</b> <button onclick='addToCart("Jalapeño Hot Dog",6)'class=add-btn>+</button></div></div></div><div class="card big"id=kaak><h2>Kaak Selection</h2><div class=item><div class=item-info><h3>Zaatar</h3><p>Traditional Lebanese zaatar</div><div class=price-add><b>$2</b> <button onclick='addToCart("Zaatar",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Zaatar W Veggies</h3><p>Zaatar with fresh vegetables</div><div class=price-add><b>$2.5</b> <button onclick='addToCart("Zaatar W Veggies",2.5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Zaatar W Cheese</h3><p>Zaatar with melted cheese</div><div class=price-add><b>$3.5</b> <button onclick='addToCart("Zaatar W Cheese",3.5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Zaatar W Labneh</h3><p>Zaatar with creamy labneh</div><div class=price-add><b>$3</b> <button onclick='addToCart("Zaatar W Labneh",3)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Labneh W Veggies</h3><p>Labneh with fresh vegetables</div><div class=price-add><b>$4</b> <button onclick='addToCart("Labneh W Veggies",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cheese</h3><p>Classic cheese kaak</div><div class=price-add><b>$3.5</b> <button onclick='addToCart("Cheese",3.5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cheese W Picon</h3><p>Cheese with picon</div><div class=price-add><b>$4</b> <button onclick='addToCart("Cheese W Picon",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cheese W Pesto</h3><p>Cheese with pesto sauce</div><div class=price-add><b>$3.5</b> <button onclick='addToCart("Cheese W Pesto",3.5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Halloumi w cheese</h3><p>Grilled halloumi cheese</div><div class=price-add><b>$5</b> <button onclick='addToCart("Halloumi w cheese ",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cheese W Halloumi</h3><p>Cheese mixed with halloumi</div><div class=price-add><b>$4</b> <button onclick='addToCart("Cheese W Halloumi",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Turkey W Cheese</h3><p>Turkey slices with cheese</div><div class=price-add><b>$5</b> <button onclick='addToCart("Turkey W Cheese",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Ham W Cheese</h3><p>Ham slices with cheese</div><div class=price-add><b>$5</b> <button onclick='addToCart("Ham W Cheese",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Sujuk</h3><p>Spicy Lebanese sujuk</div><div class=price-add><b>$5</b> <button onclick='addToCart("Sujuk",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Sujuk W Cheese</h3><p>Sujuk with melted cheese</div><div class=price-add><b>$5</b> <button onclick='addToCart("Sujuk W Cheese",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Kafta W Cheese</h3><p>Kafta meat with cheese</div><div class=price-add><b>$6</b> <button onclick='addToCart("Kafta W Cheese",6)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Pizza</h3><p>Pizza flavored kaak</div><div class=price-add><b>$6</b> <button onclick='addToCart("Pizza",6)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Fajita</h3><p>Chicken fajita kaak</div><div class=price-add><b>$7</b> <button onclick='addToCart("Fajita",7)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Steak</h3><p>Juicy steak kaak</div><div class=price-add><b>$7</b> <button onclick='addToCart("Steak",7)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Submarine</h3><p>Loaded submarine kaak</div><div class=price-add><b>$7</b> <button onclick='addToCart("Submarine",7)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Nutella</h3><p>Sweet Nutella kaak</div><div class=price-add><b>$4</b> <button onclick='addToCart("Nutella",4)'class=add-btn>+</button></div></div></div><div class="card big"id=kaak><h2>saj Selection</h2><div class=item><div class=item-info><h3>Zaatar</h3><p>Traditional Lebanese zaatar</div><div class=price-add><b>$1.1</b> <button onclick='addToCart("Zaatar",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Zaatar W Veggies</h3><p>Zaatar with fresh vegetables</div><div class=price-add><b>$1.7</b> <button onclick='addToCart("Zaatar W Veggies",2.5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Zaatar W Cheese</h3><p>Zaatar with melted cheese</div><div class=price-add><b>$2.8</b> <button onclick='addToCart("Zaatar W Cheese",3.5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Zaatar W Labneh</h3><p>Zaatar with creamy labneh</div><div class=price-add><b>$1.7</b> <button onclick='addToCart("Zaatar W Labneh",3)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Labneh W Veggies</h3><p>Labneh with fresh vegetables</div><div class=price-add><b>$2.2</b> <button onclick='addToCart("Labneh W Veggies",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cheese</h3><p>Classic cheese saj</div><div class=price-add><b>$2.8</b> <button onclick='addToCart("Cheese",3.5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cheese W Picon</h3><p>Cheese with picon</div><div class=price-add><b>$3.3</b> <button onclick='addToCart("Cheese W Picon",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Halloumi</h3><p>Grilled halloumi</div><div class=price-add><b>$2.8</b> <button onclick='addToCart("Halloumi w cheese ",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cheese W Halloumi</h3><p>Cheese mixed with halloumi</div><div class=price-add><b>$3.3</b> <button onclick='addToCart("Cheese W Halloumi",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Turkey W Cheese</h3><p>Turkey slices with cheese</div><div class=price-add><b>$4</b> <button onclick='addToCart("Turkey W Cheese",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Ham W Cheese</h3><p>Ham slices with cheese</div><div class=price-add><b>$4</b> <button onclick='addToCart("Ham W Cheese",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>shanklish</h3><p>Traditional Lebanese shanklish</div><div class=price-add><b>$2.2</b> <button onclick='addToCart("shanklish",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Nutella</h3><p>Sweet Nutella saj</div><div class=price-add><b>$2.2</b> <button onclick='addToCart("Nutella",4)'class=add-btn>+</button></div></div></div><div class=card><h2>Hot Beverages</h2><div class=item><div class=item-info><h3>Lebanese Coffee</h3><p>Traditional Lebanese coffee</div><div class=price-add><b>$3</b> <button onclick='addToCart("Lebanese Coffee",3)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Espresso Regular</h3><p>Traditional Espresso</div><div class=price-add><b>$2</b> <button onclick='addToCart("Espresso Regular ",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Double espresso</h3><p>Traditional Double espresso</div><div class=price-add><b>$3</b> <button onclick='addToCart("Double espresso",3)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>long black</h3><p>Traditional long black</div><div class=price-add><b>$4</b> <button onclick='addToCart("long black",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>latte</h3></div><div class=price-add><b>$4</b> <button onclick='addToCart("latte ",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>espresso cool</h3></div><div class=price-add><b>$3</b> <button onclick='addToCart("espresso cool",3)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Cappuccino</h3><p>Italian style cappuccino</div><div class=price-add><b>$3</b> <button onclick='addToCart("Cappuccino",3)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Café Blanc</h3><p>Hot orange blossom drink</div><div class=price-add><b>$2</b> <button onclick='addToCart("Café Blanc",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Hot Chocolate</h3><p>Warm creamy chocolate drink</div><div class=price-add><b>$2</b> <button onclick='addToCart("Hot Chocolate",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Tea</h3><p>Fresh hot tea</div><div class=price-add><b>$2</b> <button onclick='addToCart("Tea",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Nescafe</h3><p>Classic instant coffee</div><div class=price-add><b>$2</b> <button onclick='addToCart("Nescafe",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>American Coffee</h3><p>Fresh brewed coffee</div><div class=price-add><b>$2</b> <button onclick='addToCart("American Coffee",2)'class=add-btn>+</button></div></div></div><div class=card><h2>Cold Beverages</h2><div class=item><div class=item-info><h3>Beer</h3><p>Cold refreshing beer</div><div class=price-add><b>$3</b> <button onclick='addToCart("Beer",3)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Sparkling Water</h3><p>Refreshing sparkling water</div><div class=price-add><b>$2</b> <button onclick='addToCart("Sparkling Water",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>XXL</h3><p>Energy drink</div><div class=price-add><b>$2</b> <button onclick='addToCart("XXL",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Soft Drinks</h3><p>Pepsi, 7up, Miranda and more</div><div class=price-add><b>$2</b> <button onclick='addToCart("Soft Drinks",2)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Water</h3><p>Mineral water bottle</div><div class=price-add><b>$1</b> <button onclick='addToCart("Water",1)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Orange juice</h3><p>Refreshing orange juice</div><div class=price-add><b>$4</b> <button onclick='addToCart("Orange juice",4)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>carrot juice</h3><p>Refreshing carrot juice</div><div class=price-add><b>$3</b> <button onclick='addToCart("carrot juice",3)'class=add-btn>+</button></div></div></div><div class=card><h2>Argile</h2><div class=item><div class=item-info><h3>Argile</h3><p>Premium shisha experience</div><div class=price-add><b>$5</b> <button onclick='addToCart("Argile",5)'class=add-btn>+</button></div></div></div><div class=card><h2>Desserts</h2><div class=item><div class=item-info><h3>Chocolate Ball</h3><p>Rich chocolate dessert</div><div class=price-add><b>$5</b> <button onclick='addToCart("Chocolate Ball",5)'class=add-btn>+</button></div></div><div class=item><div class=item-info><h3>Noir Tiramisu</h3><p>Classic tiramisu with Noir touch</div><div class=price-add><b>$6</b> <button onclick='addToCart("Noir Tiramisu",5.5)'class=add-btn>+</button></div></div></div><button onclick=openCart() class=floating-cart>🛒 <span id=cart-count>0</span></button><div class=cart-box id=cartBox><div class=cart-header><h2>Your Cart</h2><button onclick=closeCart()>✕</button></div><div id=cart-items></div><div class=cart-total>Total: $<span id=cart-total>0</span></div><button onclick=checkoutWhatsApp() class=checkout-btn>Checkout On WhatsApp</button></div><section class=contact id=contact><h2>Order Now</h2><p>Fast delivery available</section><section class=location><h2>📍 Find Us</h2><p>Miziara - zgharta</p><iframe allowfullscreen height=350 loading=lazy src="https://maps.google.com/maps?q=34.3345909,35.927639&z=17&output=embed"style=border:0;border-radius:20px width=100%></iframe></section><footer>© 2026 Noir Cafe — All Rights Reserved<br><br>powered by <a href=https://wa.me/96103226752 style=text-decoration:none;color:#777>Gbf-Services</a><br><br><a href=https://instagram.com/noir.cafe_26 class=footer-social target=_blank><img src=instagram.png style=vertical-align:middle;margin-right:5px width=20></a></footer><script>const menuBtn=document.getElementById("menuBtn"),nav=document.getElementById("nav");menuBtn.addEventListener("click",()=>{nav.classList.toggle("active")});let cart=[];function addToCart(e,t){const n=cart.find(t=>t.name===e);n?n.qty++:cart.push({name:e,price:t,qty:1}),updateCart()}function updateCart(){const n=document.getElementById("cart-items"),t=document.getElementById("cart-count"),e=document.getElementById("cart-total");n.innerHTML="";let a=0,c=0;cart.forEach((t,e)=>{a+=t.price*t.qty,c+=t.qty,n.innerHTML+=` <div class="cart-item"> <div class="cart-left"> <h4>${t.name}</h4> <small> $${t.price} each </small> <div class="qty-box"> <button onclick="changeQty(${e},-1)">−</button> <span>${t.qty}</span> <button onclick="changeQty(${e},1)">+</button> </div> <textarea class="note-box" placeholder="Add note..." oninput="saveNote(${e}, this.value)" >${t.note||""}</textarea> </div> <strong> $${t.price*t.qty} </strong> </div> `}),t.innerText=c,e.innerText=a}function changeQty(t,e){cart[t].qty+=e,cart[t].qty<=0&&cart.splice(t,1),updateCart()}function saveNote(t,e){cart[t].note=e}function openCart(){document.getElementById("cartBox").classList.add("active")}function closeCart(){document.getElementById("cartBox").classList.remove("active")}function checkoutWhatsApp(){if(0!==cart.length){let e="Hello Noir Cafe 👋%0A%0AI want to order:%0A",n=0;cart.forEach(t=>{e+=`%0A• ${t.name} x${t.qty} = $${t.price*t.qty}`,t.note&&""!==t.note.trim()&&(e+=`%0A Note: ${t.note}`),n+=t.price*t.qty}),e+=`%0A%0ATotal: $${n}`,window.open(`https://wa.me/96170157841?text=${e}`)}else alert("Cart is empty")}</script>
+<!doctypehtml>
+<html lang=en>
+<meta charset=UTF-8>
+<meta content="width=device-width,initial-scale=1" name=viewport>
+<title>Noir Cafe</title>
+<link href=https://fonts.googleapis.com rel=preconnect>
+<link href=https://fonts.gstatic.com rel=preconnect crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel=stylesheet>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth
+  }
+
+  body {
+    background: radial-gradient(circle at top left, rgba(255, 140, 0, .12), transparent 25%), radial-gradient(circle at bottom right, rgba(216, 160, 125, .12), transparent 25%), #0b0b0b;
+    color: #fff;
+    overflow-x: hidden
+  }
+
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: .4
+  }
+
+  .blob1 {
+    width: 300px;
+    height: 300px;
+    background: #f80;
+    top: -100px;
+    left: -100px
+  }
+
+  .blob2 {
+    width: 350px;
+    height: 350px;
+    background: #d8a07d;
+    bottom: -100px;
+    right: -100px
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .65);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+    z-index: 1000
+  }
+
+  .logo h1 {
+    color: rgba(255, 217, 0, .726);
+    font-size: 36px;
+    font-weight: 800
+  }
+
+  .logo p {
+    color: #ccc;
+    font-size: 12px;
+    letter-spacing: 2px
+  }
+
+  nav {
+    display: flex;
+    gap: 25px
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s
+  }
+
+  nav a:hover {
+    color: rgba(255, 217, 0, .726)
+  }
+
+  #menuBtn {
+    display: none;
+    background: 0 0;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer
+  }
+
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .72), rgba(0, 0, 0, .88)), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1400&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8%
+  }
+
+  .hero-content {
+    max-width: 650px
+  }
+
+  .hero h2 {
+    font-size: 78px;
+    color: rgba(255, 217, 0, .726);
+    line-height: 1.1;
+    margin-bottom: 20px
+  }
+
+  .hero p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 35px
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 15px 34px;
+    background: linear-gradient(135deg, rgba(255, 217, 0, .726), #ffd900);
+    color: #111;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: .35s;
+    box-shadow: 0 10px 25px rgba(255, 179, 107, .2)
+  }
+
+  .btn:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 179, 107, .35)
+  }
+
+  .menu {
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px
+  }
+
+  .card {
+    background: rgba(255, 255, 255, .04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, .08);
+    padding: 30px;
+    border-radius: 25px;
+    transition: .4s;
+    animation: fadeUp .8s ease;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .35)
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 140, 0, .12), 0 0 30px rgba(216, 160, 125, .08)
+  }
+
+  .card.big {
+    grid-column: span 2
+  }
+
+  .card h2 {
+    color: rgba(255, 217, 0, .726);
+    margin-bottom: 20px;
+    font-size: 32px
+  }
+
+  .card p {
+    color: #aaa;
+    margin-bottom: 20px
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, .12);
+    transition: .3s
+  }
+
+  .item:hover {
+    transform: translateX(6px)
+  }
+
+  .item-left {
+    display: flex;
+    align-items: center;
+    gap: 15px
+  }
+
+  .item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 18px
+  }
+
+  .item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px
+  }
+
+  .item-info p {
+    font-size: 13px;
+    color: #888;
+    margin: 0
+  }
+
+  .price-add {
+    display: flex;
+    align-items: center;
+    gap: 14px
+  }
+
+  .price-add b {
+    color: rgba(255, 217, 0, .726);
+    font-size: 19px
+  }
+
+  .add-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 217, 0, .726), rgba(255, 217, 0, .726));
+    color: #111;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .35s;
+    box-shadow: 0 5px 15px rgba(216, 160, 125, .25)
+  }
+
+  .add-btn:hover {
+    transform: rotate(90deg) scale(1.12);
+    box-shadow: 0 0 20px rgba(255, 179, 107, .6);
+    background: #fff
+  }
+
+  .floating-cart {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 217, 0, .726), #d8a07d);
+    color: #111;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 3000;
+    font-weight: 700;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .35)
+  }
+
+  .floating-cart:hover {
+    transform: scale(1.1)
+  }
+
+  .floating-cart span {
+    font-size: 13px
+  }
+
+  .cart-box {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 380px;
+    max-width: 100%;
+    height: 100%;
+    background: #111;
+    z-index: 4000;
+    transition: .4s;
+    padding: 25px;
+    overflow-y: auto
+  }
+
+  .cart-box.active {
+    right: 0
+  }
+
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px
+  }
+
+  .cart-header h2 {
+    color: rgba(255, 217, 0, .726)
+  }
+
+  .cart-header button {
+    background: red;
+    color: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer
+  }
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #333
+  }
+
+  .cart-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+  }
+
+  .qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px
+  }
+
+  .qty-box button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 217, 0, .726);
+    color: #111;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer
+  }
+
+  .qty-box span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 700
+  }
+
+  .note-box {
+    width: 100%;
+    margin-top: 10px;
+    background: #1d1d1d;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 10px;
+    resize: none;
+    outline: 0;
+    font-size: 13px
+  }
+
+  .note-box:focus {
+    border-color: rgba(255, 217, 0, .726)
+  }
+
+  .cart-total {
+    margin-top: 25px;
+    font-size: 22px;
+    color: rgba(255, 217, 0, .726);
+    font-weight: 700
+  }
+
+  .checkout-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    background: #25d366;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer
+  }
+
+  .contact {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #161616, #24160f, #111);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    color: #aaa;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .35);
+    border-radius: 25px
+  }
+
+  .contact h2 {
+    color: rgba(255, 217, 0, .726);
+    font-size: 45px;
+    margin-bottom: 15px
+  }
+
+  .contact p {
+    color: #ccc
+  }
+
+  .location {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #161616, #24160f, #111);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    color: #aaa;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .35);
+    border-radius: 25px
+  }
+
+  .location h2 {
+    color: rgba(255, 217, 0, .726);
+    font-size: 42px;
+    margin-bottom: 15px
+  }
+
+  .location p {
+    color: #ccc;
+    margin-bottom: 25px
+  }
+
+  .location iframe {
+    border-radius: 25px
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #161616, #24160f, #111);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    color: #aaa;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .35);
+    border-radius: 25px
+  }
+
+  footer::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 179, 107, .12);
+    border-radius: 50%;
+    filter: blur(100px);
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  footer a {
+    color: rgba(255, 217, 0, .726);
+    text-decoration: none;
+    transition: .3s
+  }
+
+  footer a:hover {
+    color: #fff
+  }
+
+  .footer-social {
+    text-decoration: none;
+    color: rgba(255, 217, 0, .726);
+    font-weight: 700;
+    transition: .3s
+  }
+
+  .footer-social:hover {
+    color: #fff
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px)
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+
+  @media(max-width:768px) {
+    #menuBtn {
+      display: block
+    }
+    nav {
+      position: absolute;
+      top: 80px;
+      right: 8%;
+      width: 220px;
+      background: #111;
+      border-radius: 15px;
+      padding: 20px;
+      flex-direction: column;
+      display: none
+    }
+    nav.active {
+      display: flex
+    }
+    .hero h2 {
+      font-size: 48px
+    }
+    .hero p {
+      font-size: 17px
+    }
+    .menu {
+      grid-template-columns: 1fr;
+      padding: 70px 5%
+    }
+    .card.big {
+      grid-column: span 1
+    }
+    .item {
+      flex-direction: column;
+      align-items: flex-start
+    }
+    .price-add {
+      width: 100%;
+      justify-content: space-between
+    }
+  }
+</style>
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<header>
+  <div class=logo>
+    <h1>NC</h1>
+    <p>NOIR CAFE</div><button id=menuBtn>☰</button>
+  <nav id=nav><a href=#menu>Menu</a> <a href=#contact>Contact</a></nav>
+</header>
+<section class=hero>
+  <div class=hero-content>
+    <h2>Good Food.<br>Good Mood.</h2>
+    <p>Luxury burgers, saj, kaak , sandwiches and more. Fresh ingredients with premium taste.</p><a href=#menu class=btn>View Menu</a></div>
+</section>
+<section class=menu id=menu>
+  <div class=card>
+    <h2>Starters</h2>
+    <div class=item>
+      <div class=item-info>
+        <h3>Chicken & Cheese Poutine</h3>
+        <p>Crispy fries loaded with cheese</div>
+      <div class=price-add><b>$7</b> <button onclick='addToCart("Chicken & Cheese Poutine",7)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Cheese Poutine</h3>
+        <p>Cheese loaded fries</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Cheese Poutine",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>French Fries</h3>
+        <p>Golden crispy fries</div>
+      <div class=price-add><b>$3</b> <button onclick='addToCart("French Fries",2.5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Loaded Fries</h3>
+        <p>Fries with premium toppings</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Loaded Fries",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Nuggets 6psc</h3>
+        <p>6 pieces of crispy chicken nuggets</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Nuggets 6psc",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Sandwich Shawarma Beef</h3>
+        <p>
+      </div>
+      <div class=price-add><b>$6</b> <button onclick='addToCart("Sandwich Shawarma Beef ",6)' class=add-btn>+</button></div>
+    </div>
+  </div>
+  <div class=card>
+    <h2>Burgers</h2>
+    <p>All burgers are served with fries
+      <div class=item>
+        <div class=item-info>
+          <h3>Noir Burger</h3>
+          <p>Premium beef burger with cheese</div>
+        <div class=price-add><b>$10</b> <button onclick='addToCart("Noir Burger",10)' class=add-btn>+</button></div>
+      </div>
+      <div class=item>
+        <div class=item-info>
+          <h3>Ham & Cheese Burger</h3>
+          <p>Classic burger with ham & cheese</div>
+        <div class=price-add><b>$8</b> <button onclick='addToCart("Ham & Cheese Burger",8)' class=add-btn>+</button></div>
+      </div>
+      <div class=item>
+        <div class=item-info>
+          <h3>Crispy Chicken Burger</h3>
+          <p>Crispy chicken with special sauce</div>
+        <div class=price-add><b>$8</b> <button onclick='addToCart("Crispy Chicken Burger",8)' class=add-btn>+</button></div>
+      </div>
+      <div class=item>
+        <div class=item-info>
+          <h3>Lebanese Burger</h3>
+          <p>Traditional Lebanese style burger</div>
+        <div class=price-add><b>$6</b> <button onclick='addToCart("Lebanese Burger",6)' class=add-btn>+</button></div>
+      </div>
+      <div class=item>
+        <div class=item-info>
+          <h3>Grilled Chicken Breast Burger</h3>
+          <p>Grilled chicken breast sandwich</div>
+        <div class=price-add><b>$6</b> <button onclick='addToCart("Grilled Chicken Breast Burger",6)' class=add-btn>+</button></div>
+      </div>
+  </div>
+  <div class=card>
+    <h2>Sandwiches</h2>
+    <p>All sandwiches are served with fries
+      <div class=item>
+        <div class=item-info>
+          <h3>Steak Sandwich</h3>
+          <p>Juicy steak sandwich</div>
+        <div class=price-add><b>$8</b> <button onclick='addToCart("Steak Sandwich",8)' class=add-btn>+</button></div>
+      </div>
+      <div class=item>
+        <div class=item-info>
+          <h3>Fajita Sandwich</h3>
+          <p>Chicken fajita sandwich</div>
+        <div class=price-add><b>$7</b> <button onclick='addToCart("Fajita Sandwich",7)' class=add-btn>+</button></div>
+      </div>
+      <div class=item>
+        <div class=item-info>
+          <h3>Submarine Sandwich</h3>
+          <p>Classic submarine sandwich</div>
+        <div class=price-add><b>$7</b> <button onclick='addToCart("Submarine Sandwich",7)' class=add-btn>+</button></div>
+      </div>
+  </div>
+  <div class=card>
+    <h2>Hot Dogs</h2>
+    <div class=item>
+      <div class=item-info>
+        <h3>Classic Hot Dog</h3>
+        <p>Premium sausage hot dog</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Classic Hot Dog",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Jalapeño Hot Dog</h3>
+        <p>Hot dog with jalapeño topping</div>
+      <div class=price-add><b>$6</b> <button onclick='addToCart("Jalapeño Hot Dog",6)' class=add-btn>+</button></div>
+    </div>
+  </div>
+  <div class="card big" id=kaak>
+    <h2>Kaak Selection</h2>
+    <div class=item>
+      <div class=item-info>
+        <h3>Zaatar</h3>
+        <p>Traditional Lebanese zaatar</div>
+      <div class=price-add><b>$2</b> <button onclick='addToCart("Zaatar",2)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Zaatar W Veggies</h3>
+        <p>Zaatar with fresh vegetables</div>
+      <div class=price-add><b>$2.5</b> <button onclick='addToCart("Zaatar W Veggies",2.5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Zaatar W Cheese</h3>
+        <p>Zaatar with melted cheese</div>
+      <div class=price-add><b>$3.5</b> <button onclick='addToCart("Zaatar W Cheese",3.5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Zaatar W Labneh</h3>
+        <p>Zaatar with creamy labneh</div>
+      <div class=price-add><b>$3</b> <button onclick='addToCart("Zaatar W Labneh",3)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Labneh W Veggies</h3>
+        <p>Labneh with fresh vegetables</div>
+      <div class=price-add><b>$4</b> <button onclick='addToCart("Labneh W Veggies",4)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Cheese</h3>
+        <p>Classic cheese kaak</div>
+      <div class=price-add><b>$3.5</b> <button onclick='addToCart("Cheese",3.5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Cheese W Picon</h3>
+        <p>Cheese with picon</div>
+      <div class=price-add><b>$4</b> <button onclick='addToCart("Cheese W Picon",4)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Cheese W Pesto</h3>
+        <p>Cheese with pesto sauce</div>
+      <div class=price-add><b>$3.5</b> <button onclick='addToCart("Cheese W Pesto",3.5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Halloumi w cheese</h3>
+        <p>Grilled halloumi cheese</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Halloumi w cheese ",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Cheese W Halloumi</h3>
+        <p>Cheese mixed with halloumi</div>
+      <div class=price-add><b>$4</b> <button onclick='addToCart("Cheese W Halloumi",4)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Turkey W Cheese</h3>
+        <p>Turkey slices with cheese</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Turkey W Cheese",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Ham W Cheese</h3>
+        <p>Ham slices with cheese</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Ham W Cheese",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Sujuk</h3>
+        <p>Spicy Lebanese sujuk</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Sujuk",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Sujuk W Cheese</h3>
+        <p>Sujuk with melted cheese</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Sujuk W Cheese",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Kafta W Cheese</h3>
+        <p>Kafta meat with cheese</div>
+      <div class=price-add><b>$6</b> <button onclick='addToCart("Kafta W Cheese",6)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Pizza</h3>
+        <p>Pizza flavored kaak</div>
+      <div class=price-add><b>$6</b> <button onclick='addToCart("Pizza",6)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Fajita</h3>
+        <p>Chicken fajita kaak</div>
+      <div class=price-add><b>$7</b> <button onclick='addToCart("Fajita",7)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Steak</h3>
+        <p>Juicy steak kaak</div>
+      <div class=price-add><b>$7</b> <button onclick='addToCart("Steak",7)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Submarine</h3>
+        <p>Loaded submarine kaak</div>
+      <div class=price-add><b>$7</b> <button onclick='addToCart("Submarine",7)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Nutella</h3>
+        <p>Sweet Nutella kaak</div>
+      <div class=price-add><b>$4</b> <button onclick='addToCart("Nutella",4)' class=add-btn>+</button></div>
+    </div>
+  </div>
+  <div class="card big" id=kaak>
+    <h2>saj Selection</h2>
+    <div class=item>
+      <div class=item-info>
+        <h3>Zaatar</h3>
+        <p>Traditional Lebanese zaatar</div>
+      <div class=price-add><b>$1.1</b> <button onclick='addToCart("Zaatar",2)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Zaatar W Veggies</h3>
+        <p>Zaatar with fresh vegetables</div>
+      <div class=price-add><b>$1.7</b> <button onclick='addToCart("Zaatar W Veggies",2.5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Zaatar W Cheese</h3>
+        <p>Zaatar with melted cheese</div>
+      <div class=price-add><b>$2.8</b> <button onclick='addToCart("Zaatar W Cheese",3.5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Zaatar W Labneh</h3>
+        <p>Zaatar with creamy labneh</div>
+      <div class=price-add><b>$1.7</b> <button onclick='addToCart("Zaatar W Labneh",3)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Labneh W Veggies</h3>
+        <p>Labneh with fresh vegetables</div>
+      <div class=price-add><b>$2.2</b> <button onclick='addToCart("Labneh W Veggies",4)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Cheese</h3>
+        <p>Classic cheese saj</div>
+      <div class=price-add><b>$2.8</b> <button onclick='addToCart("Cheese",3.5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Cheese W Picon</h3>
+        <p>Cheese with picon</div>
+      <div class=price-add><b>$3.3</b> <button onclick='addToCart("Cheese W Picon",4)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Halloumi</h3>
+        <p>Grilled halloumi</div>
+      <div class=price-add><b>$2.8</b> <button onclick='addToCart("Halloumi w cheese ",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Cheese W Halloumi</h3>
+        <p>Cheese mixed with halloumi</div>
+      <div class=price-add><b>$3.3</b> <button onclick='addToCart("Cheese W Halloumi",4)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Turkey W Cheese</h3>
+        <p>Turkey slices with cheese</div>
+      <div class=price-add><b>$4</b> <button onclick='addToCart("Turkey W Cheese",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Ham W Cheese</h3>
+        <p>Ham slices with cheese</div>
+      <div class=price-add><b>$4</b> <button onclick='addToCart("Ham W Cheese",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>shanklish</h3>
+        <p>Traditional Lebanese shanklish</div>
+      <div class=price-add><b>$2.2</b> <button onclick='addToCart("shanklish",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Nutella</h3>
+        <p>Sweet Nutella saj</div>
+      <div class=price-add><b>$2.2</b> <button onclick='addToCart("Nutella",4)' class=add-btn>+</button></div>
+    </div>
+  </div>
+ <div class=card>
+        <h2>Hot Beverages</h2>
+        <div class=item>
+            <div class=item-info>
+                <h3>Lebanese Coffee</h3>
+                <p>Traditional Lebanese coffee</div>
+            <div class=price-add><b>$3</b> <button onclick='addToCart("Lebanese Coffee",3)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Espresso Regular</h3>
+                <p>Traditional Espresso</div>
+            <div class=price-add><b>$2</b> <button onclick='addToCart("Espresso Regular ",2)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Double espresso</h3>
+                <p>Traditional Double espresso</div>
+            <div class=price-add><b>$2  </b> <button onclick='addToCart("Double espresso",3)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>long black</h3>
+                <p>Traditional long black</div>
+            <div class=price-add><b>$4</b> <button onclick='addToCart("long black",4)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>latte</h3>
+            </div>
+            <div class=price-add><b>$4</b> <button onclick='addToCart("latte ",4)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>latte macchiato</h3>
+            </div>
+            <div class=price-add><b>$3.5</b> <button onclick='addToCart("latte macchiato",3.5)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Chocomilk</h3>
+            </div>
+            <div class=price-add><b>$3.5</b> <button onclick='addToCart("Chocomilk",3.5)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>espresso cool</h3>
+            </div>
+            <div class=price-add><b>$3</b> <button onclick='addToCart("espresso cool",3)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>espresso macchiato</h3>
+            </div>
+            <div class=price-add><b>$2</b> <button onclick='addToCart("espresso macchiato",2)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Cappuccino</h3>
+                <p>Italian style cappuccino</div>
+            <div class=price-add><b>$3.50</b> <button onclick='addToCart("Cappuccino",3.5)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Café Blanc</h3>
+                <p>Hot orange blossom drink</div>
+            <div class=price-add><b>$2</b> <button onclick='addToCart("Café Blanc",2)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Hot Chocolate</h3>
+                <p>Warm creamy chocolate drink</div>
+            <div class=price-add><b>$2</b> <button onclick='addToCart("Hot Chocolate",2)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Tea</h3>
+                <p>Fresh hot tea</div>
+            <div class=price-add><b>$2</b> <button onclick='addToCart("Tea",2)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Nescafe</h3>
+                <p>Classic instant coffee</div>
+            <div class=price-add><b>$2</b> <button onclick='addToCart("Nescafe",2)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>American Coffee</h3>
+                <p>Fresh brewed coffee</div>
+            <div class=price-add><b>$2</b> <button onclick='addToCart("American Coffee",2)' class=add-btn>+</button></div>
+        </div>
+         <div class=item>
+            <div class=item-info>
+                <h3>Americano</h3>
+                <p>Fresh brewed coffee</div>
+            <div class=price-add><b>$3</b> <button onclick='addToCart("American0",3)' class=add-btn>+</button></div>
+        </div>
+         <div class=item>
+            <div class=item-info>
+                <h3>Ristretto </h3>
+                <p>Fresh brewed coffee</div>
+            <div class=price-add><b>$2</b> <button onclick='addToCart("Ristretto ",2)' class=add-btn>+</button></div>
+        </div>
+    </div>
+    <div class=card>
+        <h2>Ice coffee selection </h2>
+        <div class=item>
+            <div class=item-info>
+                <h3>Iced chocolate</h3>
+
+            <div class=price-add><b>$3.50</b> <button onclick='addToCart("Iced chocolate",3.5)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Iced mocha</h3>
+            <div class=price-add><b>$4</b> <button onclick='addToCart("Iced mocha",4)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Iced nescafe</h3>
+            <div class=price-add><b>$4</b> <button onclick='addToCart("Iced nescafe",4)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Iced latte macchiato</h3>
+            <div class=price-add><b>$4</b> <button onclick='addToCart("Iced latte macchiato",4)' class=add-btn>+</button></div>
+        </div>
+        <div class=item>
+            <div class=item-info>
+                <h3>Iced caramel </h3>
+            </div>
+            <div class=price-add><b>$4</b> <button onclick='addToCart("Iced caramel ",4)' class=add-btn>+</button></div>
+        </div>
+        </div>
+  <div class=card>
+    <h2>Cold Beverages</h2>
+    <div class=item>
+      <div class=item-info>
+        <h3>Beer</h3>
+        <p>Cold refreshing beer</div>
+      <div class=price-add><b>$3</b> <button onclick='addToCart("Beer",3)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Sparkling Water</h3>
+        <p>Refreshing sparkling water</div>
+      <div class=price-add><b>$2</b> <button onclick='addToCart("Sparkling Water",2)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>XXL</h3>
+        <p>Energy drink</div>
+      <div class=price-add><b>$2</b> <button onclick='addToCart("XXL",2)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Soft Drinks</h3>
+        <p>Pepsi, 7up, Miranda and more</div>
+      <div class=price-add><b>$2</b> <button onclick='addToCart("Soft Drinks",2)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Water</h3>
+        <p>Mineral water bottle</div>
+      <div class=price-add><b>$1</b> <button onclick='addToCart("Water",1)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Orange juice</h3>
+        <p>Refreshing orange juice</div>
+      <div class=price-add><b>$4</b> <button onclick='addToCart("Orange juice",4)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>carrot juice</h3>
+        <p>Refreshing carrot juice</div>
+      <div class=price-add><b>$3</b> <button onclick='addToCart("carrot juice",3)' class=add-btn>+</button></div>
+    </div>
+  </div>
+  <div class=card>
+    <h2>Argile</h2>
+    <div class=item>
+      <div class=item-info>
+        <h3>Argile</h3>
+        <p>Premium shisha experience</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Argile",5)' class=add-btn>+</button></div>
+    </div>
+  </div>
+  <div class=card>
+    <h2>Desserts</h2>
+    <div class=item>
+      <div class=item-info>
+        <h3>Chocolate Ball</h3>
+        <p>Rich chocolate dessert</div>
+      <div class=price-add><b>$5</b> <button onclick='addToCart("Chocolate Ball",5)' class=add-btn>+</button></div>
+    </div>
+    <div class=item>
+      <div class=item-info>
+        <h3>Noir Tiramisu</h3>
+        <p>Classic tiramisu with Noir touch</div>
+      <div class=price-add><b>$6</b> <button onclick='addToCart("Noir Tiramisu",5.5)' class=add-btn>+</button></div>
+    </div>
+  </div><button onclick=openCart() class=floating-cart>🛒 <span id=cart-count>0</span></button>
+  <div class=cart-box id=cartBox>
+    <div class=cart-header>
+      <h2>Your Cart</h2><button onclick=closeCart()>✕</button></div>
+    <div id=cart-items></div>
+    <div class=cart-total>Total: $<span id=cart-total>0</span></div><button onclick=checkoutWhatsApp() class=checkout-btn>Checkout On WhatsApp</button></div>
+  <section
+    class=contact id=contact>
+    <h2>Order Now</h2>
+    <p>Fast delivery available</section>
+<section class=location>
+  <h2>📍 Find Us</h2>
+  <p>Miziara - zgharta</p><iframe allowfullscreen height=350 loading=lazy src="https://maps.google.com/maps?q=34.3345909,35.927639&z=17&output=embed"
+    style=border:0;border-radius:20px width=100%></iframe></section>
+<footer>© 2026 Noir Cafe — All Rights Reserved<br><br>powered by <a href=https://wa.me/96103226752 style=text-decoration:none;color:#777>Gbf-Services</a><br><br>
+  <a
+    href=https://instagram.com/noir.cafe_26 class=footer-social target=_blank><img src=instagram.png style=vertical-align:middle;margin-right:5px width=20></a>
+</footer>
+<script>
+  const menuBtn = document.getElementById("menuBtn"),
+    nav = document.getElementById("nav");
+  menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("active")
+  });
+  let cart = [];
+
+  function addToCart(e, t) {
+    const n = cart.find(t => t.name === e);
+    n ? n.qty++ : cart.push({
+      name: e,
+      price: t,
+      qty: 1
+    }), updateCart()
+  }
+
+  function updateCart() {
+    const n = document.getElementById("cart-items"),
+      t = document.getElementById("cart-count"),
+      e = document.getElementById("cart-total");
+    n.innerHTML = "";
+    let a = 0,
+      c = 0;
+    cart.forEach((t, e) => {
+      a += t.price * t.qty, c += t.qty, n.innerHTML +=
+        ` <div class="cart-item"> <div class="cart-left"> <h4>${t.name}</h4> <small> $${t.price} each </small> <div class="qty-box"> <button onclick="changeQty(${e},-1)">−</button> <span>${t.qty}</span> <button onclick="changeQty(${e},1)">+</button> </div> <textarea class="note-box" placeholder="Add note..." oninput="saveNote(${e}, this.value)" >${t.note||""}</textarea> </div> <strong> $${t.price*t.qty} </strong> </div> `
+    }), t.innerText = c, e.innerText = a
+  }
+
+  function changeQty(t, e) {
+    cart[t].qty += e, cart[t].qty <= 0 && cart.splice(t, 1), updateCart()
+  }
+
+  function saveNote(t, e) {
+    cart[t].note = e
+  }
+
+  function openCart() {
+    document.getElementById("cartBox").classList.add("active")
+  }
+
+  function closeCart() {
+    document.getElementById("cartBox").classList.remove("active")
+  }
+
+  function checkoutWhatsApp() {
+    if (0 !== cart.length) {
+      let e = "Hello Noir Cafe 👋%0A%0AI want to order:%0A",
+        n = 0;
+      cart.forEach(t => {
+        e += `%0A• ${t.name} x${t.qty} = $${t.price*t.qty}`, t.note && "" !== t.note.trim() && (e +=
+          `%0A Note: ${t.note}`), n += t.price * t.qty
+      }), e += `%0A%0ATotal: $${n}`, window.open(`https://wa.me/96170157841?text=${e}`)
+    } else alert("Cart is empty")
+  }
+</script>
